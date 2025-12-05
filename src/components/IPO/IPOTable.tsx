@@ -93,7 +93,10 @@ export function IPOTable({ data }: IPOTableProps) {
                         ) : (
                             <TableRow>
                                 <TableCell colSpan={visibleColumns.length} className="h-24 text-center">
-                                    No results.
+                                    <div className="flex flex-col items-center justify-center space-y-2 py-8 text-center text-muted-foreground">
+                                        <p className="text-sm font-medium">No IPOs found</p>
+                                        <p className="text-xs">Try adjusting your filters or search query.</p>
+                                    </div>
                                 </TableCell>
                             </TableRow>
                         )}

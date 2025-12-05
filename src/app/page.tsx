@@ -11,7 +11,8 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Download, Search } from "lucide-react";
+import { Download, Search, X, RefreshCw } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import mockIpos from "@/data/mockIpos.json";
 import { IPOData } from "@/types/ipo";
 import Papa from "papaparse";
@@ -88,6 +89,18 @@ export default function Home() {
             GMP AI IPO 🚀
           </div>
           <div className="flex items-center gap-4">
+            <span className="hidden md:block text-xs text-muted-foreground mr-2">
+              Last updated: {new Date().toLocaleDateString("en-IN", { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })} IST
+            </span>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8 mr-2 text-muted-foreground hover:text-foreground"
+              onClick={() => window.location.reload()}
+              title="Refresh Data"
+            >
+              <RefreshCw className="h-4 w-4" />
+            </Button>
             <ModeToggle />
           </div>
         </div>
@@ -99,48 +112,91 @@ export default function Home() {
 
         {/* Main Table Section */}
         <section id="ipo-table-section" className="space-y-6 scroll-mt-20">
-          <div className="flex flex-col md:flex-row gap-4 justify-between items-end md:items-center">
-            <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-              <Tabs
-                defaultValue="Current"
-                className="w-full md:w-auto"
-                onValueChange={(val) => setStatusFilter(val as any)}
-              >
-                <TabsList className="grid w-full grid-cols-3 md:w-[300px]">
-                  <TabsTrigger value="Current">Current</TabsTrigger>
-                  <TabsTrigger value="Upcoming">Upcoming</TabsTrigger>
-                  <TabsTrigger value="All">All</TabsTrigger>
-                </TabsList>
-              </Tabs>
+          <div className="flex flex-col xl:flex-row gap-6 justify-between items-start xl:items-end">
 
-              <Tabs
-                defaultValue="All"
-                className="w-full md:w-auto"
-                onValueChange={(val) => setSectorFilter(val as any)}
-              >
-                <TabsList className="grid w-full grid-cols-3 md:w-[300px]">
-                  <TabsTrigger value="All">All</TabsTrigger>
-                  <TabsTrigger value="Mainline">Main Board</TabsTrigger>
-                  <TabsTrigger value="SME">SME</TabsTrigger>
-                </TabsList>
-              </Tabs>
+            {/* Filters */}
+            <div className="flex flex-col sm:flex-row gap-6 w-full xl:w-auto">
+              {/* Status Group */}
+              <div className="space-y-2 w-full sm:w-auto">
+                <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Status</label>
+                <Tabs
+                  defaultValue="Current"
+                  className="w-full sm:w-auto"
+                  onValueChange={(val) => setStatusFilter(val as any)}
+                >
+                  <TabsList className="grid w-full grid-cols-3 sm:w-[320px] bg-muted/50">
+                    <TabsTrigger value="Current" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Current</TabsTrigger>
+                    <TabsTrigger value="Upcoming" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Upcoming</TabsTrigger>
+                    <TabsTrigger value="All" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">All</TabsTrigger>
+                  </TabsList>
+                </Tabs>
+              </div>
+
+              {/* Type Group */}
+              <div className="space-y-2 w-full sm:w-auto">
+                <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Board Type</label>
+                <Tabs
+                  defaultValue="All"
+                  className="w-full sm:w-auto"
+                  onValueChange={(val) => setSectorFilter(val as any)}
+                >
+                  <TabsList className="grid w-full grid-cols-3 sm:w-[280px] bg-muted/50">
+                    <TabsTrigger value="All" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">All</TabsTrigger>
+                    <TabsTrigger value="Mainline" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Mainboard</TabsTrigger>
+                    <TabsTrigger value="SME" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">SME</TabsTrigger>
+                  </TabsList>
+                </Tabs>
+              </div>
             </div>
 
-            <div className="flex gap-2 w-full md:w-auto">
-              <div className="relative w-full md:w-[300px]">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            {/* Search & Export */}
+            <div className="flex gap-3 w-full xl:w-auto items-end">
+              <div className="relative w-full xl:w-[400px] group">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
                 <Input
                   type="search"
-                  placeholder="Search companies..."
-                  className="pl-8"
+                  placeholder="Search by company, sector..."
+                  className="pl-10 h-10 w-full bg-background border-input ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all shadow-sm"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
-              <Button variant="outline" onClick={handleExport}>
+              <Button variant="outline" className="h-10 px-4 whitespace-nowrap" onClick={handleExport}>
                 <Download className="mr-2 h-4 w-4" /> Export
               </Button>
             </div>
+          </div>
+
+          {/* Active Filters & Counts */}
+          <div className="flex items-center justify-between text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <span>Showing <span className="font-bold text-foreground">{filteredData.length}</span> of {mockIpos.length} IPOs</span>
+              {(statusFilter !== 'Current' || sectorFilter !== 'All' || searchQuery) && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-6 px-2 text-xs hover:bg-destructive/10 hover:text-destructive"
+                  onClick={() => {
+                    setStatusFilter('Current');
+                    setSectorFilter('All');
+                    setSearchQuery('');
+                  }}
+                >
+                  <X className="mr-1 h-3 w-3" />
+                  Clear Filters
+                </Button>
+              )}
+            </div>
+            {/* Dynamic Filter Badge */}
+            {(statusFilter !== 'Current' || sectorFilter !== 'All' || searchQuery) && (
+              <Badge variant="secondary" className="text-xs font-normal">
+                {[
+                  statusFilter !== 'Current' ? statusFilter : null,
+                  sectorFilter !== 'All' ? `${sectorFilter} Board` : null,
+                  searchQuery ? `Search: "${searchQuery}"` : null
+                ].filter(Boolean).length} Active Filters
+              </Badge>
+            )}
           </div>
 
           <IPOTable data={filteredData} />
