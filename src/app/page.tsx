@@ -216,6 +216,34 @@ export default function Home() {
       <IPOModal />
       <MarketPulse />
 
+      {/* SEO Content Section */}
+      <section className="container mx-auto px-4 py-12 prose prose-sm dark:prose-invert max-w-none text-muted-foreground border-t">
+        <h2 className="text-foreground font-bold text-2xl mb-4">India's Premier Live IPO Tracker & GMP Analysis</h2>
+        <p>
+          Welcome to <strong className="text-foreground">GMP AI IPO</strong>, the most advanced <strong>IPO tracker for India</strong>.
+          We provide real-time updates on <strong className="text-foreground">live GMP (Grey Market Premium)</strong>,
+          subscription status, and listing estimates for both <strong>Mainboard IPOs</strong> and <strong>SME IPOs</strong>.
+        </p>
+        <div className="grid md:grid-cols-2 gap-8 mt-6">
+          <div>
+            <h3 className="text-foreground font-semibold text-lg mb-2">Why Track GMP Live?</h3>
+            <p>
+              The <em>Grey Market Premium</em> is a key indicator of market sentiment. Our <strong>live GMP tracker</strong> helps investors
+              gauge potential listing gains before the official listing date. Whether you are tracking a massive Mainboard launch or a
+              fast-moving SME IPO, getting accurate GMP data is crucial for making informed application decisions.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-foreground font-semibold text-lg mb-2">Comprehensive IPO Analysis</h3>
+            <p>
+              Beyond just prices, we offer detailed <strong>IPO subscription status</strong> updates for Retail, HNI, and QIB categories.
+              Our AI-driven verdict helps simplify complex financial data into actionable insights, making us the reliable
+              destination for <strong>Indian IPO analysis</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t py-8 mt-12 bg-muted/20">
         <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
