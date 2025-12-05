@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@latest out",
     "lint": "eslint",
     "update-data": "node scripts/update-ipos.mjs"
   },
@@ -20,6 +20,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.25",
+    "html2canvas": "^1.4.1",
     "lucide-react": "^0.555.0",
     "next": "16.0.7",
     "next-themes": "^0.4.6",

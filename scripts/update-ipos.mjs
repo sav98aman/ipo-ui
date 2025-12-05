@@ -294,10 +294,36 @@ async function fetchAndProcessGMP(currentData) {
                     ? parseFloat(gmpEntry.estimated_listing_percentage.replace('%', ''))
                     : 0;
 
+                // Ensure current GMP is in history
+                let finalHistory = detailedInfo.gmpHistory || existingItem.gmpHistory || [];
+
+                // Get today's date in ISO format (start of day) to consistent comparison
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                const todayIso = today.toISOString();
+
+                // Check if we already have an entry for today (or very recent)
+                // We'll compare YYYY-MM-DD to be safe
+                const todayString = today.toISOString().split('T')[0];
+                const hasToday = finalHistory.some(h => h.date && h.date.split('T')[0] === todayString);
+
+                // Allow 0 GMP if we have history (to show drop to 0), otherwise only if non-zero
+                if (!hasToday && ((newGmp !== 0 || newGmpPercent !== 0) || finalHistory.length > 0)) {
+                    finalHistory.push({
+                        date: todayIso,
+                        gmp: newGmp,
+                        gmpPercent: newGmpPercent
+                    });
+                }
+
+                // Sort history
+                finalHistory.sort((a, b) => new Date(a.date) - new Date(b.date));
+
                 // Merge all data
                 currentData[existingIndex] = {
                     ...existingItem,
-                    ...detailedInfo, // Overwrite with detailed info if found
+                    ...detailedInfo,
+                    gmpHistory: finalHistory, // Use our augmented history
                     gmp: newGmp,
                     gmpPercent: newGmpPercent,
                     gmpLastUpdated: new Date().toISOString(),

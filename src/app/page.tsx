@@ -85,7 +85,7 @@ export default function Home() {
       <header className="border-b sticky top-0 bg-background/80 backdrop-blur-md z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="font-bold text-xl tracking-tight flex items-center gap-2">
-            IPO Watch 🚀
+            GMP AI IPO 🚀
           </div>
           <div className="flex items-center gap-4">
             <ModeToggle />
@@ -163,7 +163,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t py-8 mt-12 bg-muted/20">
         <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} IPO Watch. Data is for informational purposes only.</p>
+          <p>© {new Date().getFullYear()} GMP AI IPO. Data is for informational purposes only.</p>
           <p className="mt-2">Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
         </div>
       </footer>

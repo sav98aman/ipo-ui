@@ -60,7 +60,15 @@ export function CountdownTimer({ openDate, closeDate }: CountdownTimerProps) {
         return () => clearInterval(timer);
     }, [openDate, closeDate]);
 
-    if (!timeLeft || timeLeft === "Closed") return <span className="text-muted-foreground">-</span>;
+    if (!timeLeft) return <span className="text-muted-foreground">-</span>;
+
+    if (timeLeft === "Closed") {
+        return (
+            <div className="text-xs font-medium text-destructive">
+                Closed
+            </div>
+        );
+    }
 
     return (
         <div className={`text-xs font-medium whitespace-nowrap ${status === 'open' ? 'text-orange-600' : 'text-blue-600'}`}>
