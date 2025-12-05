@@ -1,65 +1,173 @@
-import Image from "next/image";
+
+"use client";
+
+import { useState, useMemo } from "react";
+import { HeroSection } from "@/components/IPO/HeroSection";
+import { IPOTable } from "@/components/IPO/IPOTable";
+import { IPOModal } from "@/components/IPO/IPOModal";
+import { TrendingSection } from "@/components/IPO/TrendingSection";
+import { RecentListingsSection } from "@/components/IPO/RecentListingsSection";
+import { ModeToggle } from "@/components/mode-toggle";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Download, Search } from "lucide-react";
+import mockIpos from "@/data/mockIpos.json";
+import { IPOData } from "@/types/ipo";
+import Papa from "papaparse";
+import { toast } from "sonner";
+import { useIPOStore } from "@/lib/store";
+import { MarketPulse } from "@/components/IPO/MarketPulse";
 
 export default function Home() {
+  const { searchQuery, setSearchQuery, statusFilter, setStatusFilter, sectorFilter, setSectorFilter } = useIPOStore();
+
+  // Filter logic
+  const filteredData = useMemo(() => {
+    let data = [...(mockIpos as IPOData[])];
+
+    // Status Filter
+    if (statusFilter !== "All") {
+      data = data.filter((ipo) => ipo.status === statusFilter);
+    } else {
+      // Sort by openDate descending (most recent first)
+      // IPOs without openDate or "TBD" go to the bottom
+      data.sort((a, b) => {
+        const dateA = a.openDate && a.openDate !== "TBD" ? new Date(a.openDate).getTime() : null;
+        const dateB = b.openDate && b.openDate !== "TBD" ? new Date(b.openDate).getTime() : null;
+
+        if (dateA && dateB) {
+          return dateB - dateA; // Descending
+        }
+        if (dateA && !dateB) {
+          return -1; // A comes first
+        }
+        if (!dateA && dateB) {
+          return 1; // B comes first
+        }
+        return 0; // Both invalid/TBD
+      });
+    }
+
+    // Sector Filter
+    if (sectorFilter !== "All") {
+      data = data.filter((ipo) => ipo.sector === sectorFilter);
+    }
+
+    // Search Filter
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      data = data.filter((ipo) =>
+        ipo.companyName.toLowerCase().includes(query)
+      );
+    }
+
+    return data;
+  }, [searchQuery, statusFilter, sectorFilter]);
+
+  const handleExport = () => {
+    const csv = Papa.unparse(filteredData);
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", "ipo_data.csv");
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("CSV Exported Successfully");
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-background text-foreground">
+      {/* Navbar / Header */}
+      <header className="border-b sticky top-0 bg-background/80 backdrop-blur-md z-50">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <div className="font-bold text-xl tracking-tight flex items-center gap-2">
+            IPO Watch 🚀
+          </div>
+          <div className="flex items-center gap-4">
+            <ModeToggle />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      <div className="container mx-auto px-4 pb-12 space-y-16">
+        {/* Hero Section */}
+        <HeroSection />
+
+        {/* Main Table Section */}
+        <section id="ipo-table-section" className="space-y-6 scroll-mt-20">
+          <div className="flex flex-col md:flex-row gap-4 justify-between items-end md:items-center">
+            <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+              <Tabs
+                defaultValue="Current"
+                className="w-full md:w-auto"
+                onValueChange={(val) => setStatusFilter(val as any)}
+              >
+                <TabsList className="grid w-full grid-cols-3 md:w-[300px]">
+                  <TabsTrigger value="Current">Current</TabsTrigger>
+                  <TabsTrigger value="Upcoming">Upcoming</TabsTrigger>
+                  <TabsTrigger value="All">All</TabsTrigger>
+                </TabsList>
+              </Tabs>
+
+              <Tabs
+                defaultValue="All"
+                className="w-full md:w-auto"
+                onValueChange={(val) => setSectorFilter(val as any)}
+              >
+                <TabsList className="grid w-full grid-cols-3 md:w-[300px]">
+                  <TabsTrigger value="All">All</TabsTrigger>
+                  <TabsTrigger value="Mainline">Main Board</TabsTrigger>
+                  <TabsTrigger value="SME">SME</TabsTrigger>
+                </TabsList>
+              </Tabs>
+            </div>
+
+            <div className="flex gap-2 w-full md:w-auto">
+              <div className="relative w-full md:w-[300px]">
+                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="search"
+                  placeholder="Search companies..."
+                  className="pl-8"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+              <Button variant="outline" onClick={handleExport}>
+                <Download className="mr-2 h-4 w-4" /> Export
+              </Button>
+            </div>
+          </div>
+
+          <IPOTable data={filteredData} />
+        </section>
+
+        {/* Secondary Sections */}
+        <div className="grid gap-12 lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            <TrendingSection ipos={mockIpos as IPOData[]} />
+          </div>
+          <div>
+            <RecentListingsSection ipos={mockIpos as IPOData[]} />
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+
+      <IPOModal />
+      <MarketPulse />
+
+      {/* Footer */}
+      <footer className="border-t py-8 mt-12 bg-muted/20">
+        <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
+          <p>© {new Date().getFullYear()} IPO Watch. Data is for informational purposes only.</p>
+          <p className="mt-2">Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+        </div>
+      </footer>
+    </main>
   );
 }
+
