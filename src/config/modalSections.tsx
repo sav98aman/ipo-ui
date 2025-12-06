@@ -38,35 +38,15 @@ export const modalSections: ModalSection[] = [
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Listing Date</p>
-                    <p className="font-medium">{ipo.listingDate}</p>
+                    <p className="font-medium">
+                        {ipo.listingDate && ipo.listingDate !== "TBD"
+                            ? new Date(ipo.listingDate).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+                            : "TBD"}
+                    </p>
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Lead Manager</p>
                     <p className="font-medium">{ipo.leadManager}</p>
-                </div>
-            </div>
-        ),
-    },
-    {
-        id: "subscription",
-        title: "Subscription Status",
-        render: (ipo) => (
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <div className="rounded-lg border p-3 text-center">
-                    <p className="text-xs text-muted-foreground">Total</p>
-                    <p className="text-lg font-bold text-primary">{ipo.subscribed}</p>
-                </div>
-                <div className="rounded-lg border p-3 text-center">
-                    <p className="text-xs text-muted-foreground">Retail</p>
-                    <p className="font-semibold">{ipo.retail}</p>
-                </div>
-                <div className="rounded-lg border p-3 text-center">
-                    <p className="text-xs text-muted-foreground">QIB</p>
-                    <p className="font-semibold">{ipo.qib}</p>
-                </div>
-                <div className="rounded-lg border p-3 text-center">
-                    <p className="text-xs text-muted-foreground">NII</p>
-                    <p className="font-semibold">{ipo.nii}</p>
                 </div>
             </div>
         ),
@@ -197,6 +177,30 @@ export const modalSections: ModalSection[] = [
                 </div>
             );
         },
+    },
+    {
+        id: "subscription",
+        title: "Subscription Status",
+        render: (ipo) => (
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                <div className="rounded-lg border p-3 text-center">
+                    <p className="text-xs text-muted-foreground">Total</p>
+                    <p className="text-lg font-bold text-primary">{ipo.subscribed}</p>
+                </div>
+                <div className="rounded-lg border p-3 text-center">
+                    <p className="text-xs text-muted-foreground">Retail</p>
+                    <p className="font-semibold">{ipo.retail}</p>
+                </div>
+                <div className="rounded-lg border p-3 text-center">
+                    <p className="text-xs text-muted-foreground">QIB</p>
+                    <p className="font-semibold">{ipo.qib}</p>
+                </div>
+                <div className="rounded-lg border p-3 text-center">
+                    <p className="text-xs text-muted-foreground">NII</p>
+                    <p className="font-semibold">{ipo.nii}</p>
+                </div>
+            </div>
+        ),
     },
     {
         id: "ai_analysis",

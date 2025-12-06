@@ -329,6 +329,8 @@ async function fetchAndProcessGMP(currentData) {
                     gmpLastUpdated: new Date().toISOString(),
                 };
 
+                // Log the individual update for user feedback
+                console.log(`[UPDATE] ${existingItem.companyName}: GMP ₹${newGmp} (${newGmpPercent}%)`);
                 updatesCount++;
             }
         }

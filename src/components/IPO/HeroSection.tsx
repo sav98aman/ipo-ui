@@ -22,9 +22,6 @@ export function HeroSection() {
                 <Button size="default" className="h-10 px-6" onClick={scrollToTable}>
                     View Live IPOs <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button variant="outline" size="default" className="h-10 px-6">
-                    See GMP Today <TrendingUp className="ml-2 h-4 w-4" />
-                </Button>
             </div>
         </div>
     );

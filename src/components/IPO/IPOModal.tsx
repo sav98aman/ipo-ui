@@ -81,7 +81,10 @@ export function IPOModal() {
                         </Button>
                     </div>
                     <div className="flex items-center gap-4">
-                        <div className="h-16 w-16 rounded-full border bg-white p-2 shrink-0">
+                        <div className={`h-16 w-16 bg-white p-2 shrink-0 border-4 rounded-full ${selectedIPO.status === "Current" ? "border-emerald-500" :
+                            selectedIPO.status === "Upcoming" ? "border-yellow-500 border-t-transparent" :
+                                "border-red-500 border-r-transparent"
+                            }`}>
                             <img
                                 src={selectedIPO.logo}
                                 alt={selectedIPO.companyName}
@@ -113,16 +116,25 @@ export function IPOModal() {
 
                 <div className="flex-1 p-6 overflow-y-auto">
                     <div className="space-y-8 pb-6">
-                        {modalSections.map((section) => (
-                            <div key={section.id} className="space-y-3">
-                                <h3 className="text-lg font-semibold tracking-tight border-b pb-2">
-                                    {section.title}
-                                </h3>
-                                <div className="pt-1">
-                                    {section.render(selectedIPO)}
+                        {(() => {
+                            const hasGMP = selectedIPO.gmpHistory && selectedIPO.gmpHistory.length > 0;
+                            const sortedSections = [...modalSections].sort((a, b) => {
+                                if (a.id === 'gmp_trend') return hasGMP ? -1 : 1;
+                                if (b.id === 'gmp_trend') return hasGMP ? 1 : -1;
+                                return 0;
+                            });
+
+                            return sortedSections.map((section) => (
+                                <div key={section.id} className="space-y-3">
+                                    <h3 className="text-lg font-semibold tracking-tight border-b pb-2">
+                                        {section.title}
+                                    </h3>
+                                    <div className="pt-1">
+                                        {section.render(selectedIPO)}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ));
+                        })()}
                     </div>
                 </div>
             </DialogContent>

@@ -120,13 +120,14 @@ export default function Home() {
               <div className="space-y-2 w-full sm:w-auto">
                 <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Status</label>
                 <Tabs
-                  defaultValue="Current"
+                  value={statusFilter}
                   className="w-full sm:w-auto"
                   onValueChange={(val) => setStatusFilter(val as any)}
                 >
-                  <TabsList className="grid w-full grid-cols-3 sm:w-[320px] bg-muted/50">
+                  <TabsList className="grid w-full grid-cols-4 sm:w-[400px] bg-muted/50">
                     <TabsTrigger value="Current" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Current</TabsTrigger>
                     <TabsTrigger value="Upcoming" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Upcoming</TabsTrigger>
+                    <TabsTrigger value="Closed" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Closed</TabsTrigger>
                     <TabsTrigger value="All" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">All</TabsTrigger>
                   </TabsList>
                 </Tabs>
@@ -136,7 +137,7 @@ export default function Home() {
               <div className="space-y-2 w-full sm:w-auto">
                 <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Board Type</label>
                 <Tabs
-                  defaultValue="All"
+                  value={sectorFilter}
                   className="w-full sm:w-auto"
                   onValueChange={(val) => setSectorFilter(val as any)}
                 >
