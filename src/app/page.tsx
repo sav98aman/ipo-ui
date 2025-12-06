@@ -89,7 +89,7 @@ export default function Home() {
             GMP AI IPO 🚀
           </div>
           <div className="flex items-center gap-4">
-            <span className="hidden md:block text-xs text-muted-foreground mr-2">
+            <span className="text-xs text-muted-foreground mr-2">
               Last updated: {new Date().toLocaleDateString("en-IN", { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })} IST
             </span>
             <Button
@@ -115,55 +115,86 @@ export default function Home() {
           <div className="flex flex-col xl:flex-row gap-6 justify-between items-start xl:items-end">
 
             {/* Filters */}
-            <div className="flex flex-col sm:flex-row gap-6 w-full xl:w-auto">
+            <div className="flex flex-col md:flex-row gap-6 w-full xl:w-auto">
               {/* Status Group */}
-              <div className="space-y-2 w-full sm:w-auto">
+              <div className="space-y-2 w-full md:w-auto">
                 <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Status</label>
-                <Tabs
+
+                {/* Desktop Tabs */}
+                <div className="hidden md:block">
+                  <Tabs
+                    value={statusFilter}
+                    className="w-full"
+                    onValueChange={(val) => setStatusFilter(val as any)}
+                  >
+                    <TabsList className="grid w-[400px] grid-cols-4 bg-muted/50">
+                      <TabsTrigger value="Current">Current</TabsTrigger>
+                      <TabsTrigger value="Upcoming">Upcoming</TabsTrigger>
+                      <TabsTrigger value="Closed">Closed</TabsTrigger>
+                      <TabsTrigger value="All">All</TabsTrigger>
+                    </TabsList>
+                  </Tabs>
+                </div>
+
+                {/* Mobile Dropdown */}
+                <select
+                  className="md:hidden h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   value={statusFilter}
-                  className="w-full sm:w-auto"
-                  onValueChange={(val) => setStatusFilter(val as any)}
+                  onChange={(e) => setStatusFilter(e.target.value as any)}
                 >
-                  <TabsList className="grid w-full grid-cols-4 sm:w-[400px] bg-muted/50">
-                    <TabsTrigger value="Current" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Current</TabsTrigger>
-                    <TabsTrigger value="Upcoming" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Upcoming</TabsTrigger>
-                    <TabsTrigger value="Closed" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Closed</TabsTrigger>
-                    <TabsTrigger value="All" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">All</TabsTrigger>
-                  </TabsList>
-                </Tabs>
+                  <option value="Current">Current</option>
+                  <option value="Upcoming">Upcoming</option>
+                  <option value="Closed">Closed</option>
+                  <option value="All">All Status</option>
+                </select>
               </div>
 
               {/* Type Group */}
-              <div className="space-y-2 w-full sm:w-auto">
+              <div className="space-y-2 w-full md:w-auto">
                 <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Board Type</label>
-                <Tabs
+
+                {/* Desktop Tabs */}
+                <div className="hidden md:block">
+                  <Tabs
+                    value={sectorFilter}
+                    className="w-full"
+                    onValueChange={(val) => setSectorFilter(val as any)}
+                  >
+                    <TabsList className="grid w-[280px] grid-cols-3 bg-muted/50">
+                      <TabsTrigger value="All">All</TabsTrigger>
+                      <TabsTrigger value="Mainline">Mainboard</TabsTrigger>
+                      <TabsTrigger value="SME">SME</TabsTrigger>
+                    </TabsList>
+                  </Tabs>
+                </div>
+
+                {/* Mobile Dropdown */}
+                <select
+                  className="md:hidden h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   value={sectorFilter}
-                  className="w-full sm:w-auto"
-                  onValueChange={(val) => setSectorFilter(val as any)}
+                  onChange={(e) => setSectorFilter(e.target.value as any)}
                 >
-                  <TabsList className="grid w-full grid-cols-3 sm:w-[280px] bg-muted/50">
-                    <TabsTrigger value="All" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">All</TabsTrigger>
-                    <TabsTrigger value="Mainline" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Mainboard</TabsTrigger>
-                    <TabsTrigger value="SME" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">SME</TabsTrigger>
-                  </TabsList>
-                </Tabs>
+                  <option value="All">All Boards</option>
+                  <option value="Mainline">Mainboard</option>
+                  <option value="SME">SME</option>
+                </select>
               </div>
             </div>
 
             {/* Search & Export */}
-            <div className="flex gap-3 w-full xl:w-auto items-end">
+            <div className="flex flex-col sm:flex-row gap-3 w-full xl:w-auto items-end">
               <div className="relative w-full xl:w-[400px] group">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
                 <Input
                   type="search"
-                  placeholder="Search by company, sector..."
+                  placeholder="Search IPO..."
                   className="pl-10 h-10 w-full bg-background border-input ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all shadow-sm"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
-              <Button variant="outline" className="h-10 px-4 whitespace-nowrap" onClick={handleExport}>
-                <Download className="mr-2 h-4 w-4" /> Export
+              <Button variant="outline" className="h-10 px-4 whitespace-nowrap w-full sm:w-auto" onClick={handleExport}>
+                <Download className="mr-2 h-4 w-4" /> Export CSV
               </Button>
             </div>
           </div>
