@@ -5,8 +5,8 @@ interface IPOStore {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
 
-    statusFilter: 'Current' | 'Upcoming' | 'All';
-    setStatusFilter: (status: 'Current' | 'Upcoming' | 'All') => void;
+    statusFilter: 'Current' | 'Upcoming' | 'Closed' | 'All';
+    setStatusFilter: (status: 'Current' | 'Upcoming' | 'Closed' | 'All') => void;
 
     sectorFilter: 'All' | 'Mainline' | 'SME';
     setSectorFilter: (sector: 'All' | 'Mainline' | 'SME') => void;

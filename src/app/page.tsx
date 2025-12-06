@@ -1,9 +1,10 @@
 
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { HeroSection } from "@/components/IPO/HeroSection";
 import { IPOTable } from "@/components/IPO/IPOTable";
+import { URLSync } from "@/components/IPO/URLSync";
 import { IPOModal } from "@/components/IPO/IPOModal";
 import { TrendingSection } from "@/components/IPO/TrendingSection";
 import { RecentListingsSection } from "@/components/IPO/RecentListingsSection";
@@ -247,6 +248,11 @@ export default function Home() {
 
       <IPOModal />
       <MarketPulse />
+
+      {/* URL Synchronization */}
+      <Suspense fallback={null}>
+        <URLSync />
+      </Suspense>
 
       {/* SEO Content Section */}
       <section className="container mx-auto px-4 py-12 prose prose-sm dark:prose-invert max-w-none text-muted-foreground border-t">
