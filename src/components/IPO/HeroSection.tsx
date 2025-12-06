@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp } from "lucide-react";
+import { ArrowRight, TrendingUp, Search } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
     const scrollToTable = () => {
@@ -22,6 +23,11 @@ export function HeroSection() {
                 <Button size="default" className="h-10 px-6" onClick={scrollToTable}>
                     View Live IPOs <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
+                <Link href="/status">
+                    <Button variant="outline" size="default" className="h-10 px-6">
+                        Check Allotment Status <Search className="ml-2 h-4 w-4" />
+                    </Button>
+                </Link>
             </div>
         </div>
     );
