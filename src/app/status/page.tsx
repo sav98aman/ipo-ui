@@ -37,24 +37,25 @@ export default function StatusPage() {
                 </div>
 
                 <div className="flex-1 relative bg-white overflow-hidden">
-                    <TabsContent value="kfintech" className="h-full w-full m-0 p-0 absolute inset-0">
+                    <TabsContent value="kfintech" className="h-full w-full m-0 p-0 absolute inset-0 flex flex-col">
+
+                        {/* Toolbar for External Link (Prevents Overlap) */}
+                        <div className="w-full bg-muted/20 border-b p-2 flex justify-end shrink-0 z-20">
+                            <Button variant="ghost" size="sm" asChild className="text-xs h-7 text-muted-foreground hover:text-primary">
+                                <a href="https://ipostatus.kfintech.com/" target="_blank" rel="noopener noreferrer">
+                                    Open in New Window <ExternalLink className="ml-2 h-3 w-3" />
+                                </a>
+                            </Button>
+                        </div>
+
                         {/* Fallback/Loading Text */}
                         <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-muted-foreground text-sm z-0">
                             Loading KFintech Portal...
                         </p>
 
-                        {/* Overlay Button for External Link */}
-                        <div className="absolute top-4 right-4 z-20">
-                            <Button variant="outline" size="sm" asChild className="bg-white/90 backdrop-blur shadow-sm">
-                                <a href="https://ipostatus.kfintech.com/" target="_blank" rel="noopener noreferrer">
-                                    Open New Tab <ExternalLink className="ml-2 h-3 w-3" />
-                                </a>
-                            </Button>
-                        </div>
-
                         <iframe
                             src="https://ipostatus.kfintech.com/"
-                            className="w-full h-full border-none relative z-10"
+                            className="flex-1 w-full border-none relative z-10"
                             title="KFintech IPO Status"
                             loading="lazy"
                         />
