@@ -25,6 +25,16 @@ export function MobileIPOCard({ ipo, onSelect }: MobileIPOCardProps) {
     const subColor = subVal > 50 ? "text-green-600 font-bold" : subVal > 10 ? "text-emerald-600" : "text-muted-foreground";
     const subFire = subVal > 50 ? "🔥" : "";
 
+    // Helper for formatting dates
+    const formatDate = (dateStr: string) => {
+        if (!dateStr || dateStr === "TBD") return "TBD";
+        try {
+            return new Date(dateStr).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: '2-digit' });
+        } catch (e) {
+            return dateStr;
+        }
+    };
+
     return (
         <div
             className="bg-card rounded-xl border shadow-sm p-4 space-y-4 hover:shadow-md transition-shadow active:scale-[0.99]"
@@ -82,7 +92,7 @@ export function MobileIPOCard({ ipo, onSelect }: MobileIPOCardProps) {
                     <p className="text-xs text-muted-foreground flex items-center gap-1">
                         <Clock className="h-3 w-3" /> Opens/Closes
                     </p>
-                    <p className="font-medium">{ipo.openDate} - {ipo.closeDate}</p>
+                    <p className="font-medium">{formatDate(ipo.openDate)} - {formatDate(ipo.closeDate)}</p>
                 </div>
                 <div className="space-y-0.5">
                     <p className="text-xs text-muted-foreground flex items-center gap-1">
