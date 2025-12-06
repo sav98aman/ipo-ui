@@ -20,11 +20,6 @@ export function MobileIPOCard({ ipo, onSelect }: MobileIPOCardProps) {
 
     const verdict = getVerdictInfo(ipo.gmpPercent);
 
-    // Parse subscription to number for logic (e.g., "85.90x" -> 85.90)
-    const subVal = parseFloat(ipo.subscribed?.replace('x', '') || "0");
-    const subColor = subVal > 50 ? "text-green-600 font-bold" : subVal > 10 ? "text-emerald-600" : "text-muted-foreground";
-    const subFire = subVal > 50 ? "🔥" : "";
-
     // Helper for formatting dates
     const formatDate = (dateStr: string) => {
         if (!dateStr || dateStr === "TBD") return "TBD";
@@ -98,8 +93,8 @@ export function MobileIPOCard({ ipo, onSelect }: MobileIPOCardProps) {
                     <p className="text-xs text-muted-foreground flex items-center gap-1">
                         <BarChart3 className="h-3 w-3" /> Subscription
                     </p>
-                    <p className={cn("font-medium", subColor)}>
-                        {ipo.subscribed || "N/A"} {subFire}
+                    <p className="font-medium">
+                        {ipo.subscribed || "N/A"}
                     </p>
                 </div>
                 <div className="space-y-0.5 col-span-2">
