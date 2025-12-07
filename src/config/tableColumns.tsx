@@ -5,6 +5,21 @@ import { CountdownTimer } from "@/components/IPO/CountdownTimer";
 import { Button } from "@/components/ui/button";
 import { ArrowUpDown } from "lucide-react";
 
+// Safe date formatter that works same on server and client
+const formatDateSafe = (dateStr: string): string => {
+    if (!dateStr || dateStr === "TBD") return "-";
+    const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return dateStr;
+
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+
+    return `${day} ${month} ${year}`;
+};
+
+
 export const tableColumns: ColumnDef<IPOData>[] = [
     {
         accessorKey: "companyName",
@@ -146,12 +161,9 @@ export const tableColumns: ColumnDef<IPOData>[] = [
         cell: ({ row }) => {
             const dateStr = row.getValue("openDate") as string;
             if (!dateStr || dateStr === "TBD") return <span className="text-muted-foreground">-</span>;
-            const date = new Date(dateStr);
-            // Check for invalid date
-            if (isNaN(date.getTime())) return <span className="text-xs">{dateStr}</span>;
 
             return <div className="text-xs whitespace-nowrap font-medium text-muted-foreground">
-                {date.toLocaleDateString("en-IN", { day: '2-digit', month: 'short', year: 'numeric' })}
+                {formatDateSafe(dateStr)}
             </div>;
         },
     },
@@ -172,11 +184,9 @@ export const tableColumns: ColumnDef<IPOData>[] = [
         cell: ({ row }) => {
             const dateStr = row.getValue("closeDate") as string;
             if (!dateStr || dateStr === "TBD") return <span className="text-muted-foreground">-</span>;
-            const date = new Date(dateStr);
-            if (isNaN(date.getTime())) return <span className="text-xs">{dateStr}</span>;
 
             return <span className="text-xs whitespace-nowrap font-medium text-muted-foreground">
-                {date.toLocaleDateString("en-IN", { day: '2-digit', month: 'short', year: 'numeric' })}
+                {formatDateSafe(dateStr)}
             </span>;
         },
     },

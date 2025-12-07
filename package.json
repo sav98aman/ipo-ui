@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "npx serve@latest out",
     "lint": "eslint",
-    "update-data": "node scripts/update-ipos.mjs"
+    "update-data": "node scripts/update-ipos.mjs",
+    "monitor": "node scripts/monitor.mjs",
+    "refresh": "npm run update-data && npm run build"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
