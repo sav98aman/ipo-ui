@@ -5,18 +5,11 @@ import { CountdownTimer } from "@/components/IPO/CountdownTimer";
 import { Button } from "@/components/ui/button";
 import { ArrowUpDown } from "lucide-react";
 
+import { formatDateIST } from "@/lib/utils";
+
 // Safe date formatter that works same on server and client
 const formatDateSafe = (dateStr: string): string => {
-    if (!dateStr || dateStr === "TBD") return "-";
-    const date = new Date(dateStr);
-    if (isNaN(date.getTime())) return dateStr;
-
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = months[date.getMonth()];
-    const year = date.getFullYear();
-
-    return `${day} ${month} ${year}`;
+    return formatDateIST(dateStr);
 };
 
 

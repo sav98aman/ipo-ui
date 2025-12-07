@@ -21,22 +21,11 @@ import Papa from "papaparse";
 import { toast } from "sonner";
 import { useIPOStore } from "@/lib/store";
 import { MarketPulse } from "@/components/IPO/MarketPulse";
+import { formatDateTimeIST } from "@/lib/utils";
 
 // Format the last update timestamp
 const formatLastUpdate = () => {
-  try {
-    const date = new Date(lastUpdateMeta.lastUpdated);
-    return date.toLocaleString("en-IN", {
-      timeZone: "Asia/Kolkata",
-      day: '2-digit',
-      month: 'short',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
-    });
-  } catch {
-    return "Recently";
-  }
+  return formatDateTimeIST(lastUpdateMeta.lastUpdated);
 };
 
 export default function Home() {
@@ -109,7 +98,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-xs text-muted-foreground mr-2">
-              Last updated: {formatLastUpdate()} IST
+              Last updated: {formatLastUpdate()}
             </span>
             <Button
               variant="ghost"

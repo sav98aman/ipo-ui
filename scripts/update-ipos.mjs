@@ -14,14 +14,21 @@ const ENDPOINTS = {
 };
 
 function formatDate(timestampOrString) {
-    if (!timestampOrString) return 'TBD';
-    // If it's already a date string like "2025-12-02", return it (legacy)
+    if (!timestampOrString || timestampOrString === 'TBD') return 'TBD';
+
+    // If it's already a date string like "2025-12-02", return it
     if (typeof timestampOrString === 'string' && timestampOrString.match(/^\d{4}-\d{2}-\d{2}$/)) {
         return timestampOrString;
     }
-    // If timestamp or ISO string
+
     try {
-        return new Date(timestampOrString).toISOString();
+        const date = new Date(timestampOrString);
+        if (isNaN(date.getTime())) return 'TBD';
+
+        // Return strictly YYYY-MM-DD based on UTC or auto conversion to avoid timezone messy shifts
+        // For IPO dates, usually the date part is what matters. 
+        // We'll use ISO string split, which is UTC based.
+        return date.toISOString().split('T')[0];
     } catch (e) {
         return 'TBD';
     }
@@ -30,6 +37,20 @@ function formatDate(timestampOrString) {
 function formatCurrency(amount) {
     if (!amount) return 'TBD';
     return `₹${amount}`;
+}
+
+// Fixed: Return an ISO-like string but offset to IST, or a readable IST string if preferred.
+// The user explicitly asked for "Indian time frame". simple ISO is UTC.
+// We will return a readable ISO-like string with +05:30 offset to be technically accurate and parseable, 
+// OR a custom string if that's what the JSON expects.
+// Let's stick to ISO-8601 with offset for machine safety, but let's try to match user expectations of "IST".
+function getISTISOString() {
+    const now = new Date();
+    // Shift time to IST
+    const istOffset = 5.5 * 60 * 60 * 1000;
+    const istDate = new Date(now.getTime() + istOffset);
+    // Remove the 'Z' and add '+05:30'
+    return istDate.toISOString().replace('Z', '+05:30');
 }
 
 function deriveStatus(openDate, closeDate, originalStatus) {
@@ -139,7 +160,7 @@ async function fetchAndProcess(url, status, currentData) {
                     issueSize: 'TBD',
                     gmp: 0,
                     gmpPercent: 0,
-                    gmpLastUpdated: new Date().toISOString(),
+                    gmpLastUpdated: getISTISOString(),
                     retail: '0.00x',
                     qib: '0.00x',
                     nii: '0.00x',
@@ -326,7 +347,7 @@ async function fetchAndProcessGMP(currentData) {
                     gmpHistory: finalHistory, // Use our augmented history
                     gmp: newGmp,
                     gmpPercent: newGmpPercent,
-                    gmpLastUpdated: new Date().toISOString(),
+                    gmpLastUpdated: getISTISOString(),
                 };
 
                 // Log the individual update for user feedback
@@ -381,7 +402,7 @@ async function updateAllIpoData() {
         // Save last update timestamp
         const metadataFile = path.join(__dirname, '../src/data/lastUpdate.json');
         const metadata = {
-            lastUpdated: new Date().toISOString(),
+            lastUpdated: getISTISOString(),
             totalIPOs: currentData.length,
             updateStats: {
                 upcoming: upcomingStats,

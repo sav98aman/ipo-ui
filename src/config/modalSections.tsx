@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { formatDateIST } from "@/lib/utils";
 
 export interface ModalSection {
     id: string;
@@ -30,18 +31,16 @@ export const modalSections: ModalSection[] = [
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Open Date</p>
-                    <p className="font-medium">{ipo.openDate}</p>
+                    <p className="font-medium">{formatDateIST(ipo.openDate)}</p>
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Close Date</p>
-                    <p className="font-medium">{ipo.closeDate}</p>
+                    <p className="font-medium">{formatDateIST(ipo.closeDate)}</p>
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Listing Date</p>
                     <p className="font-medium">
-                        {ipo.listingDate && ipo.listingDate !== "TBD"
-                            ? new Date(ipo.listingDate).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
-                            : "TBD"}
+                        {formatDateIST(ipo.listingDate)}
                     </p>
                 </div>
                 <div className="space-y-1">

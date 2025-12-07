@@ -1,6 +1,7 @@
 import { IPOData } from "@/types/ipo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { formatDateIST } from "@/lib/utils";
 
 interface RecentListingsSectionProps {
     ipos: IPOData[];
@@ -32,7 +33,7 @@ export function RecentListingsSection({ ipos }: RecentListingsSectionProps) {
                                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                         <span>{ipo.sector === 'Mainline' ? 'Main Board' : ipo.sector}</span>
                                         <span>•</span>
-                                        <span>Closed: {ipo.closeDate}</span>
+                                        <span>Closed: {formatDateIST(ipo.closeDate)}</span>
                                     </div>
                                 </div>
                             </div>

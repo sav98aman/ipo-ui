@@ -2,7 +2,7 @@ import { IPOData } from "@/types/ipo";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Clock, BarChart3, ChevronRight, AlertCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, formatDateIST } from "@/lib/utils";
 
 interface MobileIPOCardProps {
     ipo: IPOData;
@@ -22,12 +22,7 @@ export function MobileIPOCard({ ipo, onSelect }: MobileIPOCardProps) {
 
     // Helper for formatting dates
     const formatDate = (dateStr: string) => {
-        if (!dateStr || dateStr === "TBD") return "TBD";
-        try {
-            return new Date(dateStr).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: '2-digit' });
-        } catch (e) {
-            return dateStr;
-        }
+        return formatDateIST(dateStr);
     };
 
     return (
