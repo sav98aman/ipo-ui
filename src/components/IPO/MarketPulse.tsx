@@ -47,7 +47,7 @@ export function MarketPulse() {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-4 animate-in fade-in zoom-in duration-500 pointer-events-none">
+        <div className="hidden md:flex fixed bottom-8 right-8 z-50 flex-col gap-4 animate-in fade-in zoom-in duration-500 pointer-events-none">
             {/* Positive Sentiment Bubble */}
             <div className="flex flex-col items-center justify-center w-16 h-16 rounded-full bg-green-500/10 dark:bg-green-500/20 text-green-700 dark:text-green-400 shadow-lg shadow-green-500/10 animate-bounce-slow backdrop-blur-md border border-green-500/20 pointer-events-auto cursor-default hover:scale-110 transition-transform">
                 <TrendingUp className="w-4 h-4 mb-0.5" />

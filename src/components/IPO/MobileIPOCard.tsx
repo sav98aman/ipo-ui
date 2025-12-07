@@ -32,22 +32,33 @@ export function MobileIPOCard({ ipo, onSelect }: MobileIPOCardProps) {
         >
             {/* Header */}
             <div className="flex justify-between items-start gap-3">
-                <div className="flex items-center gap-3">
-                    {/* Placeholder Logo or First Letter */}
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg shrink-0">
-                        {ipo.companyName.charAt(0)}
+                <div className="flex items-center gap-3 overflow-hidden">
+                    {/* Logo matching desktop view */}
+                    <div className="h-12 w-12 rounded-full border bg-white p-1 shrink-0 flex items-center justify-center">
+                        <img
+                            src={ipo.logo}
+                            alt={ipo.companyName}
+                            className="h-full w-full object-contain"
+                        />
                     </div>
-                    <div>
-                        <h3 className="font-bold text-base leading-tight line-clamp-2">{ipo.companyName}</h3>
-                        <div className="flex gap-2 mt-1">
-                            <Badge variant="outline" className="text-[10px] h-5 px-1.5 font-normal">
+                    <div className="min-w-0 flex-1">
+                        <h3 className="font-bold text-base leading-tight truncate pr-2">{ipo.companyName}</h3>
+                        <div className="flex flex-wrap gap-2 mt-1.5">
+                            <Badge variant="outline" className="text-[10px] h-5 px-1.5 font-normal shrink-0">
                                 {ipo.sector === 'SME' ? 'SME' : 'Mainboard'}
                             </Badge>
                             <Badge
-                                variant={ipo.status === 'Current' ? 'default' : 'secondary'}
-                                className="text-[10px] h-5 px-1.5 font-normal"
+                                className={cn(
+                                    "text-[10px] h-5 px-1.5 font-normal border shrink-0",
+                                    ipo.status === 'Current'
+                                        ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800 animate-pulse"
+                                        : ipo.status === 'Upcoming'
+                                            ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-800"
+                                            : "bg-muted text-muted-foreground border-border"
+                                )}
+                                variant="outline"
                             >
-                                {ipo.status}
+                                {ipo.status === 'Current' ? 'Live' : ipo.status}
                             </Badge>
                         </div>
                     </div>

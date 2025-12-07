@@ -97,9 +97,14 @@ export default function Home() {
             GMP AI IPO 🚀
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-muted-foreground mr-2">
-              Last updated: {formatLastUpdate()}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] md:text-xs text-muted-foreground mr-1 md:mr-2 whitespace-nowrap hidden sm:inline-block">
+                Last updated: {formatLastUpdate()}
+              </span>
+              <span className="text-[10px] text-muted-foreground mr-1 whitespace-nowrap sm:hidden">
+                {formatLastUpdate()}
+              </span>
+            </div>
             <Button
               variant="ghost"
               size="icon"
@@ -208,7 +213,7 @@ export default function Home() {
           </div>
 
           {/* Active Filters & Counts */}
-          <div className="flex items-center justify-between text-sm text-muted-foreground">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between text-sm text-muted-foreground gap-4">
             <div className="flex items-center gap-2">
               <span>Showing <span className="font-bold text-foreground">{filteredData.length}</span> of {mockIpos.length} IPOs</span>
               {(statusFilter !== 'Current' || sectorFilter !== 'All' || searchQuery) && (
