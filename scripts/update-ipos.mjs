@@ -25,10 +25,14 @@ function formatDate(timestampOrString) {
         const date = new Date(timestampOrString);
         if (isNaN(date.getTime())) return 'TBD';
 
-        // Return strictly YYYY-MM-DD based on UTC or auto conversion to avoid timezone messy shifts
-        // For IPO dates, usually the date part is what matters. 
-        // We'll use ISO string split, which is UTC based.
-        return date.toISOString().split('T')[0];
+        // Convert to IST (UTC + 5:30)
+        // We add the offset to the epoch time, then use toISOString() which gives UTC.
+        // The resulting "UTC" date string is actually the IST time.
+        // e.g. 20:00 UTC -> +5.5h -> 01:30 Next Day (IST correct)
+        const istOffset = 5.5 * 60 * 60 * 1000;
+        const istDate = new Date(date.getTime() + istOffset);
+
+        return istDate.toISOString().split('T')[0];
     } catch (e) {
         return 'TBD';
     }
