@@ -378,6 +378,20 @@ async function updateAllIpoData() {
         // Write back to file
         fs.writeFileSync(DATA_FILE, JSON.stringify(currentData, null, 2));
 
+        // Save last update timestamp
+        const metadataFile = path.join(__dirname, '../src/data/lastUpdate.json');
+        const metadata = {
+            lastUpdated: new Date().toISOString(),
+            totalIPOs: currentData.length,
+            updateStats: {
+                upcoming: upcomingStats,
+                open: openStats,
+                closed: closedStats,
+                gmpUpdates
+            }
+        };
+        fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
+
         console.log('\n----------------------------------------');
         console.log('Update Summary:');
         console.log(`Upcoming: ${upcomingStats.updates} updated, ${upcomingStats.new} added`);
@@ -386,6 +400,7 @@ async function updateAllIpoData() {
         console.log(`GMP:      ${gmpUpdates} IPOs updated with latest GMP`);
         console.log(`\nTotal IPOs in database: ${currentData.length}`);
         console.log(`Data saved to ${DATA_FILE}`);
+        console.log(`Last update: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST`);
         console.log('----------------------------------------');
 
     } catch (error) {

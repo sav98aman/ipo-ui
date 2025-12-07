@@ -15,11 +15,29 @@ import { Button } from "@/components/ui/button";
 import { Download, Search, X, RefreshCw } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import mockIpos from "@/data/mockIpos.json";
+import lastUpdateMeta from "@/data/lastUpdate.json";
 import { IPOData } from "@/types/ipo";
 import Papa from "papaparse";
 import { toast } from "sonner";
 import { useIPOStore } from "@/lib/store";
 import { MarketPulse } from "@/components/IPO/MarketPulse";
+
+// Format the last update timestamp
+const formatLastUpdate = () => {
+  try {
+    const date = new Date(lastUpdateMeta.lastUpdated);
+    return date.toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      day: '2-digit',
+      month: 'short',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    });
+  } catch {
+    return "Recently";
+  }
+};
 
 export default function Home() {
   const { searchQuery, setSearchQuery, statusFilter, setStatusFilter, sectorFilter, setSectorFilter } = useIPOStore();
@@ -91,7 +109,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-xs text-muted-foreground mr-2">
-              Last updated: {new Date().toLocaleDateString("en-IN", { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })} IST
+              Last updated: {formatLastUpdate()} IST
             </span>
             <Button
               variant="ghost"

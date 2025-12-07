@@ -1,0 +1,76 @@
+name: Auto Update IPO Data
+
+on:
+  schedule:
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Update IPO data
+        run: |
+          echo "🔄 Fetching latest IPO data..."
+          npm run update-data
+          echo "✅ Data updated at $(date)"
+      
+      - name: Check if data changed
+        id: check_changes
+        run: |
+          git diff --quiet src/data/mockIpos.json src/data/lastUpdate.json || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit updated data
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add src/data/mockIpos.json src/data/lastUpdate.json
+          git commit -m "Auto-update: IPO data $(date +'%Y-%m-%d %H:%M IST')"
+          git push
+      
+      - name: Build site
+        if: steps.check_changes.outputs.changed == 'true'
+        run: npm run build
+      
+      - name: Upload artifact
+        if: steps.check_changes.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './out'
+      
+      - name: Deploy to GitHub Pages
+        if: steps.check_changes.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
+      - name: Summary
+        run: |
+          if [ "${{ steps.check_changes.outputs.changed }}" == "true" ]; then
+            echo "✅ Data updated and deployed successfully!"
+          else
+            echo "ℹ️ No changes detected - skipped deployment"
+          fi
