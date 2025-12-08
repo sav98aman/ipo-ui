@@ -2,25 +2,28 @@
 
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Search } from "lucide-react";
+import { ArrowLeft, ExternalLink, Search, X } from "lucide-react";
 import { useState, useMemo } from 'react';
 import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import mockIpos from "@/data/mockIpos.json";
 import ipoRegistrarsMap from "@/data/ipo-registrars-map.json";
 
+type SectorFilter = 'All' | 'SME' | 'Mainline';
+
 export default function StatusClient() {
     const [searchQuery, setSearchQuery] = useState("");
+    const [sectorFilter, setSectorFilter] = useState<SectorFilter>('All');
 
-    const openPopup = (url: string, title: string) => {
-        const width = 500;
-        const height = 700;
-        const left = (window.screen.width / 2) - (width / 2);
-        const top = (window.screen.height / 2) - (height / 2);
-        window.open(
-            url,
-            title,
-            `width=${width},height=${height},top=${top},left=${left},toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes`
-        );
+    // Modal state
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalUrl, setModalUrl] = useState("");
+    const [modalTitle, setModalTitle] = useState("");
+
+    const openStatusModal = (url: string, companyName: string) => {
+        setModalUrl(url);
+        setModalTitle(`Check Status - ${companyName}`);
+        setModalOpen(true);
     };
 
     // Filter and prepare data
@@ -37,6 +40,9 @@ export default function StatusClient() {
                 // @ts-ignore
                 const registrarInfo = ipoRegistrarsMap[ipo.id];
                 if (!registrarInfo) return false;
+
+                // Sector filter
+                if (sectorFilter !== 'All' && ipo.sector !== sectorFilter) return false;
 
                 // Search filter
                 if (searchQuery) {
@@ -63,7 +69,7 @@ export default function StatusClient() {
                 if (b.listingDate === "TBD") return -1;
                 return new Date(b.listingDate).getTime() - new Date(a.listingDate).getTime();
             });
-    }, [searchQuery]);
+    }, [searchQuery, sectorFilter]);
 
     return (
         <div className="min-h-screen flex flex-col bg-background text-foreground">
@@ -83,18 +89,34 @@ export default function StatusClient() {
                 </div>
             </div>
 
-            {/* Search Bar */}
+            {/* Search Bar & Filters */}
             <div className="bg-muted/40 border-b border-border">
                 <div className="max-w-7xl mx-auto px-4 py-4">
-                    <div className="relative max-w-md">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                        <Input
-                            type="search"
-                            placeholder="Search by company name or symbol..."
-                            className="pl-10"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
+                    <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+                        <div className="relative max-w-md flex-1">
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                            <Input
+                                type="search"
+                                placeholder="Search by company name or symbol..."
+                                className="pl-10"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                            />
+                        </div>
+                        {/* Sector Filter */}
+                        <div className="flex gap-2">
+                            {(['All', 'SME', 'Mainline'] as SectorFilter[]).map((filter) => (
+                                <Button
+                                    key={filter}
+                                    size="sm"
+                                    variant={sectorFilter === filter ? 'default' : 'outline'}
+                                    onClick={() => setSectorFilter(filter)}
+                                    className="min-w-[70px]"
+                                >
+                                    {filter === 'Mainline' ? 'Mainboard' : filter}
+                                </Button>
+                            ))}
+                        </div>
                     </div>
                     <p className="text-xs text-muted-foreground mt-2">
                         Showing {filteredIpos.length} IPOs with closed bidding
@@ -166,7 +188,7 @@ export default function StatusClient() {
                                                         size="sm"
                                                         variant="outline"
                                                         className="gap-2"
-                                                        onClick={() => openPopup(ipo.registrar.link, `status_${ipo.id}`)}
+                                                        onClick={() => openStatusModal(ipo.registrar.link, ipo.companyName)}
                                                     >
                                                         Check Status <ExternalLink className="h-3 w-3" />
                                                     </Button>
@@ -187,6 +209,33 @@ export default function StatusClient() {
                     Click "Check Status" to verify your allotment with the official registrar
                 </p>
             </div>
+
+            {/* Status Check Modal */}
+            <Dialog open={modalOpen} onOpenChange={setModalOpen}>
+                <DialogContent className="max-w-4xl w-[95vw] h-[85vh] flex flex-col p-0">
+                    <DialogHeader className="px-6 py-4 border-b flex-shrink-0">
+                        <div className="flex items-center justify-between">
+                            <DialogTitle className="text-lg font-semibold">{modalTitle}</DialogTitle>
+                            <a
+                                href={modalUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1"
+                            >
+                                Open in new tab <ExternalLink className="h-3 w-3" />
+                            </a>
+                        </div>
+                    </DialogHeader>
+                    <div className="flex-1 overflow-hidden">
+                        <iframe
+                            src={modalUrl}
+                            className="w-full h-full border-0"
+                            title="IPO Allotment Status"
+                            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+                        />
+                    </div>
+                </DialogContent>
+            </Dialog>
         </div>
     );
 }
