@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   description: "Track latest Indian IPOs with real-time GMP, subscription status, and AI-driven analysis. Monitor Mainline and SME IPOs live with our advanced dashboard.",
   keywords: "IPO tracker India, live GMP tracker, IPO subscription, Indian IPO analysis, SME IPO, Mainboard IPO, GMP live, IPO allotment status",
   authors: [{ name: "GMP AI IPO" }],
-  viewport: "width=device-width, initial-scale=1.0",
   metadataBase: new URL('https://ipo-ai-ui.netlify.app'),
   alternates: {
     canonical: '/',
@@ -57,6 +56,12 @@ export const metadata: Metadata = {
     icon: '/icon.png',
     apple: '/apple-icon.png',
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({

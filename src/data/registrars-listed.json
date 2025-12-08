@@ -1,0 +1,250 @@
+[
+    {
+        "id": 3,
+        "name": "Bigshare Services Pvt.Ltd.",
+        "ipoCount": "643",
+        "websiteLink": "https://www.bigshareonline.com",
+        "checkStatusLink": "https://www.bigshareonline.com/ipo_allotment.html",
+        "verified": true
+    },
+    {
+        "id": 1,
+        "name": "MUFG Intime India Pvt.Ltd.",
+        "ipoCount": "571",
+        "websiteLink": "https://in.mpms.mufg.com/home.html",
+        "checkStatusLink": "https://in.mpms.mufg.com/Initial_Offer/public-issues.html",
+        "verified": true
+    },
+    {
+        "id": 2,
+        "name": "Kfin Technologies Ltd.",
+        "ipoCount": "464",
+        "websiteLink": "https://www.kfintech.com",
+        "checkStatusLink": "https://ipostatus.kfintech.com",
+        "verified": true
+    },
+    {
+        "id": 99,
+        "name": "Skyline Financial Services Pvt.Ltd.",
+        "ipoCount": "145",
+        "websiteLink": "https://www.skylinerta.com",
+        "checkStatusLink": "https://www.skylinerta.com/ipo.php",
+        "verified": true
+    },
+    {
+        "id": 6,
+        "name": "Cameo Corporate Services Ltd.",
+        "ipoCount": "131",
+        "websiteLink": "https://www.cameoindia.com",
+        "checkStatusLink": "https://ipo.cameoindia.com",
+        "verified": true
+    },
+    {
+        "id": 87,
+        "name": "Purva Sharegistry (India) Pvt.Ltd.",
+        "ipoCount": "67",
+        "websiteLink": "https://www.purvashare.com",
+        "checkStatusLink": "https://www.purvashare.com/investor-service/ipo-query",
+        "verified": true
+    },
+    {
+        "id": 404,
+        "name": "Maashitla Securities Pvt.Ltd.",
+        "ipoCount": "59",
+        "websiteLink": "https://maashitla.com",
+        "checkStatusLink": "https://maashitla.com/allotment-status/public-issues",
+        "verified": true
+    },
+    {
+        "id": 50,
+        "name": "MAS Services Ltd.",
+        "ipoCount": "26",
+        "websiteLink": "https://www.masserv.com",
+        "checkStatusLink": "https://www.masserv.com/asearch.asp",
+        "verified": true
+    },
+    {
+        "id": 59,
+        "name": "Sharepro Services Pvt.Ltd.",
+        "ipoCount": "25",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 57,
+        "name": "Sharex Dynamic (India) Pvt.Ltd.",
+        "ipoCount": "24",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 100,
+        "name": "Satellite Corporate Services Pvt.Ltd.",
+        "ipoCount": "17",
+        "websiteLink": "https://www.satellitecorporate.com",
+        "checkStatusLink": "https://www.satellitecorporate.com/ipo-query.php",
+        "verified": true
+    },
+    {
+        "id": 63,
+        "name": "Beetal Financial & Computer Services Pvt.Ltd.",
+        "ipoCount": "13",
+        "websiteLink": "https://beetal.in",
+        "checkStatusLink": "https://beetal.in/investor-services/#IPO_Allotment_Status",
+        "verified": true
+    },
+    {
+        "id": 56,
+        "name": "Alankit Assignments Ltd.",
+        "ipoCount": "11",
+        "websiteLink": "https://www.alankit.com",
+        "checkStatusLink": "http://ipo.alankit.com/",
+        "verified": true
+    },
+    {
+        "id": 155,
+        "name": "Integrated Registry Management Services Pvt.Ltd.",
+        "ipoCount": "7",
+        "websiteLink": "https://www.integratedregistryindia.com",
+        "checkStatusLink": "https://www.integratedregistry.in/RegistrarsToSTANew.aspx?OD=2",
+        "verified": true
+    },
+    {
+        "id": 4,
+        "name": "Aarthi Consultants Pvt.Ltd.",
+        "ipoCount": "5",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 11,
+        "name": "Datamatics Business Soultions Ltd.",
+        "ipoCount": "4",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 9,
+        "name": "Adroit Corporate Services Pvt.Ltd.",
+        "ipoCount": "4",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 8,
+        "name": "Mondkar Computers Pvt.Ltd.",
+        "ipoCount": "4",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 10,
+        "name": "S.K.D.C.Consultants Ltd.",
+        "ipoCount": "3",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 64,
+        "name": "Maheshwari Datamatics Pvt.Ltd.",
+        "ipoCount": "3",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 109,
+        "name": "Universal Capital Securities Pvt.Ltd.",
+        "ipoCount": "3",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 7,
+        "name": "Ankit Consultancy Pvt.Ltd.",
+        "ipoCount": "2",
+        "websiteLink": "https://www.ankitonline.com",
+        "checkStatusLink": "https://www.ankitonline.com/PublicIssue/FrmPublicIssue.aspx",
+        "verified": true
+    },
+    {
+        "id": 169,
+        "name": "Accurate Securities & Registry Pvt.Ltd.",
+        "ipoCount": "2",
+        "websiteLink": "https://www.accuratesecurities.com",
+        "checkStatusLink": "https://www.accuratesecurities.com/ipo-details.html",
+        "verified": true
+    },
+    {
+        "id": 46,
+        "name": "Niche Technologies Pvt.Ltd.",
+        "ipoCount": "2",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 91,
+        "name": "CB Management Services Pvt.Ltd.",
+        "ipoCount": "2",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 446,
+        "name": "NSDL Database Management Ltd.",
+        "ipoCount": "1",
+        "websiteLink": "https://www.ndml.in",
+        "checkStatusLink": "https://rta.ndml.in/ipo-status-webapp/#/ipo-status",
+        "verified": true
+    },
+    {
+        "id": 103,
+        "name": "RCMC Share Registry Pvt.Ltd.",
+        "ipoCount": "1",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 108,
+        "name": "S.K.Infosolutions Pvt.Ltd.",
+        "ipoCount": "1",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 190,
+        "name": "Venture Capital & Corporate Investments Ltd.",
+        "ipoCount": "0",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 105,
+        "name": "MCS Share Transfer Agent Ltd.",
+        "ipoCount": "0",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    },
+    {
+        "id": 484,
+        "name": "Abhipra Capital Limited",
+        "ipoCount": "0",
+        "verified": false,
+        "websiteLink": "#",
+        "checkStatusLink": "#"
+    }
+]
