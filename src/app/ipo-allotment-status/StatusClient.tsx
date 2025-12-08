@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Search, X } from "lucide-react";
+import { ArrowLeft, ExternalLink, Search } from "lucide-react";
 import { useState, useMemo } from 'react';
 import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import mockIpos from "@/data/mockIpos.json";
 import ipoRegistrarsMap from "@/data/ipo-registrars-map.json";
 
@@ -15,15 +14,18 @@ export default function StatusClient() {
     const [searchQuery, setSearchQuery] = useState("");
     const [sectorFilter, setSectorFilter] = useState<SectorFilter>('All');
 
-    // Modal state
-    const [modalOpen, setModalOpen] = useState(false);
-    const [modalUrl, setModalUrl] = useState("");
-    const [modalTitle, setModalTitle] = useState("");
+    const openStatusPopup = (url: string) => {
+        // Open a popup window with specific dimensions
+        const width = 1000;
+        const height = 800;
+        const left = (window.screen.width - width) / 2;
+        const top = (window.screen.height - height) / 2;
 
-    const openStatusModal = (url: string, companyName: string) => {
-        setModalUrl(url);
-        setModalTitle(`Check Status - ${companyName}`);
-        setModalOpen(true);
+        window.open(
+            url,
+            'IPOStatus',
+            `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+        );
     };
 
     // Filter and prepare data
@@ -188,7 +190,7 @@ export default function StatusClient() {
                                                         size="sm"
                                                         variant="outline"
                                                         className="gap-2"
-                                                        onClick={() => openStatusModal(ipo.registrar.link, ipo.companyName)}
+                                                        onClick={() => openStatusPopup(ipo.registrar.link)}
                                                     >
                                                         Check Status <ExternalLink className="h-3 w-3" />
                                                     </Button>
@@ -210,32 +212,7 @@ export default function StatusClient() {
                 </p>
             </div>
 
-            {/* Status Check Modal */}
-            <Dialog open={modalOpen} onOpenChange={setModalOpen}>
-                <DialogContent className="max-w-4xl w-[95vw] h-[85vh] flex flex-col p-0">
-                    <DialogHeader className="px-6 py-4 border-b flex-shrink-0">
-                        <div className="flex items-center justify-between">
-                            <DialogTitle className="text-lg font-semibold">{modalTitle}</DialogTitle>
-                            <a
-                                href={modalUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1"
-                            >
-                                Open in new tab <ExternalLink className="h-3 w-3" />
-                            </a>
-                        </div>
-                    </DialogHeader>
-                    <div className="flex-1 overflow-hidden">
-                        <iframe
-                            src={modalUrl}
-                            className="w-full h-full border-0"
-                            title="IPO Allotment Status"
-                            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-                        />
-                    </div>
-                </DialogContent>
-            </Dialog>
+
         </div>
     );
 }
