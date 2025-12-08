@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Search } from "lucide-react";
 import Link from "next/link";
-import { AllotmentSearch } from "./AllotmentSearch";
 
 export function HeroSection() {
     const scrollToTable = () => {
@@ -24,7 +23,11 @@ export function HeroSection() {
                 <Button size="default" className="h-12 sm:h-10 px-6 w-full sm:w-auto text-base" onClick={scrollToTable}>
                     View Live IPOs <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <AllotmentSearch />
+                <Link href="/ipo-allotment-status" className="w-full sm:w-auto">
+                    <Button variant="outline" size="default" className="h-12 sm:h-10 px-6 w-full sm:w-auto text-base">
+                        Check Allotment Status <Search className="ml-2 h-4 w-4" />
+                    </Button>
+                </Link>
             </div>
         </div>
     );

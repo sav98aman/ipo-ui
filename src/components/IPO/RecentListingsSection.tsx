@@ -33,7 +33,7 @@ export function RecentListingsSection({ ipos }: RecentListingsSectionProps) {
                                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                         <span>{ipo.sector === 'Mainline' ? 'Main Board' : ipo.sector}</span>
                                         <span>•</span>
-                                        <span>Closed: {formatDateIST(ipo.closeDate)}</span>
+                                        <span suppressHydrationWarning>Closed: {formatDateIST(ipo.closeDate)}</span>
                                     </div>
                                 </div>
                             </div>

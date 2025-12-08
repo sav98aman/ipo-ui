@@ -155,7 +155,7 @@ export const tableColumns: ColumnDef<IPOData>[] = [
             const dateStr = row.getValue("openDate") as string;
             if (!dateStr || dateStr === "TBD") return <span className="text-muted-foreground">-</span>;
 
-            return <div className="text-xs whitespace-nowrap font-medium text-muted-foreground">
+            return <div className="text-xs whitespace-nowrap font-medium text-muted-foreground" suppressHydrationWarning>
                 {formatDateSafe(dateStr)}
             </div>;
         },
@@ -178,7 +178,7 @@ export const tableColumns: ColumnDef<IPOData>[] = [
             const dateStr = row.getValue("closeDate") as string;
             if (!dateStr || dateStr === "TBD") return <span className="text-muted-foreground">-</span>;
 
-            return <span className="text-xs whitespace-nowrap font-medium text-muted-foreground">
+            return <span className="text-xs whitespace-nowrap font-medium text-muted-foreground" suppressHydrationWarning>
                 {formatDateSafe(dateStr)}
             </span>;
         },

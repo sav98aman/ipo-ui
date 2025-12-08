@@ -6,12 +6,12 @@ export const metadata: Metadata = {
     description: "Check your IPO allotment status across all major registrars including KFintech, LinkIntime (MUFG), BSE, and NSE. Real-time status checking with secure popup access.",
     keywords: "IPO status, check IPO allotment, KFintech status, LinkIntime IPO status, BSE IPO check, NSE IPO allotment, IPO result",
     alternates: {
-        canonical: '/status',
+        canonical: '/ipo-allotment-status',
     },
     openGraph: {
         title: "Check IPO Allotment Status | IPO Watch",
         description: "Universal IPO Status Checker for KFintech, LinkIntime, BSE, and NSE.",
-        url: 'https://ipo-ai-ui.netlify.app/status',
+        url: 'https://ipo-ai-ui.netlify.app/ipo-allotment-status',
         type: 'website',
     },
 };

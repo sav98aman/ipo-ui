@@ -93,7 +93,7 @@ export function MobileIPOCard({ ipo, onSelect }: MobileIPOCardProps) {
                     <p className="text-xs text-muted-foreground flex items-center gap-1">
                         <Clock className="h-3 w-3" /> Opens/Closes
                     </p>
-                    <p className="font-medium">{formatDate(ipo.openDate)} - {formatDate(ipo.closeDate)}</p>
+                    <p className="font-medium" suppressHydrationWarning>{formatDate(ipo.openDate)} - {formatDate(ipo.closeDate)}</p>
                 </div>
                 <div className="space-y-0.5">
                     <p className="text-xs text-muted-foreground flex items-center gap-1">

@@ -22,6 +22,7 @@ import { toast } from "sonner";
 import { useIPOStore } from "@/lib/store";
 import { MarketPulse } from "@/components/IPO/MarketPulse";
 import { formatDateTimeIST } from "@/lib/utils";
+import { IPOLogo, LogoOption1, LogoOption2, LogoOption3, LogoOption4, LogoOption5 } from "@/components/ui/logo";
 
 // Format the last update timestamp
 const formatLastUpdate = () => {
@@ -92,27 +93,35 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       {/* Navbar / Header */}
       <header className="border-b sticky top-0 bg-background/80 backdrop-blur-md z-50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="font-bold text-xl tracking-tight flex items-center gap-2">
-            GMP AI IPO 🚀
+        <div className="container mx-auto px-2 sm:px-4 h-16 flex items-center justify-center relative">
+          {/* Logo */}
+          <div className="flex items-center gap-2 absolute left-2 sm:left-4">
+            <IPOLogo className="h-10 w-10 sm:h-12 sm:w-12" />
+            <span className="hidden sm:inline font-bold text-lg sm:text-xl tracking-tight">
+              GMP AI IPO
+            </span>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] md:text-xs text-muted-foreground mr-1 md:mr-2 whitespace-nowrap hidden sm:inline-block">
-                Last updated: {formatLastUpdate()}
-              </span>
-              <span className="text-[10px] text-muted-foreground mr-1 whitespace-nowrap sm:hidden">
-                {formatLastUpdate()}
-              </span>
-            </div>
+
+          {/* Centered Timestamp - Smaller on mobile */}
+          <div className="flex items-center gap-2 mx-16 sm:mx-0">
+            <span className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground whitespace-nowrap hidden sm:inline-block" suppressHydrationWarning>
+              Last updated: {formatLastUpdate()}
+            </span>
+            <span className="text-[9px] text-muted-foreground whitespace-nowrap sm:hidden" suppressHydrationWarning>
+              {formatLastUpdate()}
+            </span>
+          </div>
+
+          {/* Right side controls */}
+          <div className="flex items-center gap-1 sm:gap-2 absolute right-2 sm:right-4">
             <Button
               variant="ghost"
               size="icon"
-              className="h-8 w-8 mr-2 text-muted-foreground hover:text-foreground"
+              className="h-7 w-7 sm:h-8 sm:w-8 text-muted-foreground hover:text-foreground"
               onClick={() => window.location.reload()}
               title="Refresh Data"
             >
-              <RefreshCw className="h-4 w-4" />
+              <RefreshCw className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </Button>
             <ModeToggle />
           </div>

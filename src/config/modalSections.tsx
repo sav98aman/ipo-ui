@@ -31,16 +31,16 @@ export const modalSections: ModalSection[] = [
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Open Date</p>
-                    <p className="font-medium">{formatDateIST(ipo.openDate)}</p>
+                    <p className="font-medium" suppressHydrationWarning>{formatDateIST(ipo.openDate)}</p>
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Close Date</p>
-                    <p className="font-medium">{formatDateIST(ipo.closeDate)}</p>
+                    <p className="font-medium" suppressHydrationWarning>{formatDateIST(ipo.closeDate)}</p>
                 </div>
                 <div className="space-y-1">
                     <p className="text-xs text-muted-foreground">Listing Date</p>
                     <p className="font-medium">
-                        {formatDateIST(ipo.listingDate)}
+                        <span suppressHydrationWarning>{formatDateIST(ipo.listingDate)}</span>
                     </p>
                 </div>
                 <div className="space-y-1">
