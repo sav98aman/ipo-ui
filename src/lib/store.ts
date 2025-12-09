@@ -22,7 +22,7 @@ export const useIPOStore = create<IPOStore>((set) => ({
     searchQuery: '',
     setSearchQuery: (query) => set({ searchQuery: query }),
 
-    statusFilter: 'Current',
+    statusFilter: 'All',
     setStatusFilter: (status) => set({ statusFilter: status }),
 
     sectorFilter: 'All',

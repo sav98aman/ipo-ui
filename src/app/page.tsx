@@ -105,10 +105,10 @@ export default function Home() {
           {/* Centered Timestamp - Smaller on mobile */}
           <div className="flex items-center gap-2 mx-16 sm:mx-0">
             <span className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground whitespace-nowrap hidden sm:inline-block" suppressHydrationWarning>
-              Last updated: {formatLastUpdate()}
+              Last updated: <span className="font-bold text-green-600 dark:text-green-400">{formatLastUpdate()}</span>
             </span>
             <span className="text-[9px] text-muted-foreground whitespace-nowrap sm:hidden" suppressHydrationWarning>
-              {formatLastUpdate()}
+              <span className="font-bold text-green-600 dark:text-green-400">{formatLastUpdate()}</span>
             </span>
           </div>
 
