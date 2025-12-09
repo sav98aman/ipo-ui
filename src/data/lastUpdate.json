@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2025-12-09T07:36:28.547+05:30",
-  "totalIPOs": 177,
+  "lastUpdated": "2025-12-09T09:02:13.384+05:30",
+  "totalIPOs": 181,
   "updateStats": {
     "upcoming": {
       "updates": 33,
-      "new": 0
+      "new": 4
     },
     "open": {
       "updates": 10,
@@ -14,6 +14,6 @@
       "updates": 131,
       "new": 0
     },
-    "gmpUpdates": 147
+    "gmpUpdates": 150
   }
 }
