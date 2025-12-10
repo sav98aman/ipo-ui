@@ -5,7 +5,7 @@ on:
     branches: ["master"]
   workflow_dispatch:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/5 * * * *'
 
 permissions:
   contents: write
@@ -45,5 +45,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Auto-update IPO data: $timestamp"
+            git pull --rebase origin master
             git push
           fi
