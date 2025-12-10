@@ -172,7 +172,7 @@ export default function StatusClient() {
                                                             <span className="font-medium text-green-600 dark:text-green-400">
                                                                 ₹{ipo.gmp}
                                                             </span>
-                                                            {ipo.gmpPercent > 0 && (
+                                                            {(ipo.gmpPercent ?? 0) > 0 && (
                                                                 <span className="text-xs text-muted-foreground">
                                                                     +{ipo.gmpPercent}%
                                                                 </span>
