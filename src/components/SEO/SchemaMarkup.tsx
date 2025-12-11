@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 export default function SchemaMarkup() {
-    const schemaData = {
+    const webAppSchema = {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "IPO Watch - Live Indian IPO Tracker",
@@ -30,6 +30,15 @@ export default function SchemaMarkup() {
             "name": "GMP AI IPO",
             "logo": "https://ipo-ai-ui.netlify.app/icon.png"
         }
+    };
+
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "IPO Watch",
+        "url": "https://ipo-ai-ui.netlify.app",
+        "description": "Live Indian IPO tracker with real-time GMP analysis",
+        "creator": "GMP AI IPO Team"
     };
 
     const organizationSchema = {
@@ -86,7 +95,8 @@ export default function SchemaMarkup() {
 
     return (
         <>
-            <Script id="schema-webapp" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+            <Script id="schema-webapp" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+            <Script id="schema-website" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
             <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         </>

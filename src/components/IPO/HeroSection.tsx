@@ -13,10 +13,10 @@ export function HeroSection() {
     return (
         <div className="py-8 text-center space-y-4 max-w-4xl mx-auto">
             <h1 className="text-3xl font-extrabold tracking-tight lg:text-5xl bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
-                IPO Watch – Live Indian IPO Tracker
+                Live IPO Tracker India 2025 <span className="block sm:inline">| Real-time GMP & SME Updates</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-                Track the latest Mainline and SME IPOs in India with real-time GMP, subscription status, and AI-driven analysis.
+                Track 185+ live Indian IPOs with real-time GMP, subscription status & AI analysis. Get SME IPO updates, grey market premiums & investment verdicts instantly.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full px-4 sm:px-0">
