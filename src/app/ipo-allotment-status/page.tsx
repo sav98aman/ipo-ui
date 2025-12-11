@@ -4,7 +4,7 @@ import StatusClient from './StatusClient';
 export const metadata: Metadata = {
     title: "IPO Allotment Status Checker 2025 | NSE SME IPO Results",
     description: "Check IPO allotment status instantly for Mainboard & SME IPOs. Verify your shares, refunds and listing details in real-time.",
-    keywords: "IPO allotment status, check IPO result, SME IPO allotment, Mainboard IPO status, KFintech IPO status, LinkIntime status, NSE IPO result, BSE IPO allotment",
+    keywords: "IPO status, check IPO allotment, KFintech status, LinkIntime IPO status, BSE IPO check, NSE IPO allotment, IPO result",
     alternates: {
         canonical: '/ipo-allotment-status',
     },
@@ -13,14 +13,6 @@ export const metadata: Metadata = {
         description: "Check IPO allotment status instantly for Mainboard & SME IPOs. Verify your shares, refunds and listing details in real-time.",
         url: 'https://ipo-ai-ui.netlify.app/ipo-allotment-status',
         type: 'website',
-        images: [
-            {
-                url: '/og-image.png',
-                width: 1200,
-                height: 630,
-                alt: 'IPO Allotment Status Checker 2025',
-            },
-        ],
     },
     other: {
         "author": "GMP AI IPO Team",

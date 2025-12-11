@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useMemo, Suspense } from "react";
@@ -8,63 +7,48 @@ import { URLSync } from "@/components/IPO/URLSync";
 import { IPOModal } from "@/components/IPO/IPOModal";
 import { TrendingSection } from "@/components/IPO/TrendingSection";
 import { RecentListingsSection } from "@/components/IPO/RecentListingsSection";
-import { ModeToggle } from "@/components/mode-toggle";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Download, Search, X, RefreshCw } from "lucide-react";
+import { Download, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import mockIpos from "@/data/mockIpos.json";
-import lastUpdateMeta from "@/data/lastUpdate.json";
 import { IPOData } from "@/types/ipo";
 import Papa from "papaparse";
 import { toast } from "sonner";
 import { useIPOStore } from "@/lib/store";
 import { MarketPulse } from "@/components/IPO/MarketPulse";
-import { formatDateTimeIST } from "@/lib/utils";
-import { IPOLogo, LogoOption1, LogoOption2, LogoOption3, LogoOption4, LogoOption5 } from "@/components/ui/logo";
-
-// Format the last update timestamp
-const formatLastUpdate = () => {
-  return formatDateTimeIST(lastUpdateMeta.lastUpdated);
-};
 
 export default function Home() {
   const { searchQuery, setSearchQuery, statusFilter, setStatusFilter, sectorFilter, setSectorFilter } = useIPOStore();
 
-  // Filter logic
   const filteredData = useMemo(() => {
     let data = [...(mockIpos as IPOData[])];
 
-    // Status Filter
     if (statusFilter !== "All") {
       data = data.filter((ipo) => ipo.status === statusFilter);
     } else {
-      // Sort by openDate descending (most recent first)
-      // IPOs without openDate or "TBD" go to the bottom
       data.sort((a, b) => {
         const dateA = a.openDate && a.openDate !== "TBD" ? new Date(a.openDate).getTime() : null;
         const dateB = b.openDate && b.openDate !== "TBD" ? new Date(b.openDate).getTime() : null;
 
         if (dateA && dateB) {
-          return dateB - dateA; // Descending
+          return dateB - dateA;
         }
         if (dateA && !dateB) {
-          return -1; // A comes first
+          return -1;
         }
         if (!dateA && dateB) {
-          return 1; // B comes first
+          return 1;
         }
-        return 0; // Both invalid/TBD
+        return 0;
       });
     }
 
-    // Sector Filter
     if (sectorFilter !== "All") {
       data = data.filter((ipo) => ipo.sector === sectorFilter);
     }
 
-    // Search Filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       data = data.filter((ipo) =>
@@ -91,172 +75,123 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Navbar / Header */}
-      <header className="border-b sticky top-0 bg-background/80 backdrop-blur-md z-50">
-        <div className="container mx-auto px-2 sm:px-4 h-16 flex items-center justify-center relative">
-          {/* Logo */}
-          <div className="flex items-center gap-2 absolute left-2 sm:left-4">
-            <IPOLogo className="h-10 w-10 sm:h-12 sm:w-12" />
-            <span className="hidden sm:inline font-bold text-lg sm:text-xl tracking-tight">
-              GMP AI IPO
-            </span>
-          </div>
 
-          {/* Centered Timestamp - Smaller on mobile */}
-          <div className="flex items-center gap-2 mx-16 sm:mx-0">
-            <span className="text-[9px] sm:text-[10px] md:text-xs text-muted-foreground whitespace-nowrap hidden sm:inline-block" suppressHydrationWarning>
-              Last updated: <span className="font-bold text-green-600 dark:text-green-400">{formatLastUpdate()}</span>
-            </span>
-            <span className="text-[9px] text-muted-foreground whitespace-nowrap sm:hidden" suppressHydrationWarning>
-              <span className="font-bold text-green-600 dark:text-green-400">{formatLastUpdate()}</span>
-            </span>
-          </div>
 
-          {/* Right side controls */}
-          <div className="flex items-center gap-1 sm:gap-2 absolute right-2 sm:right-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-7 w-7 sm:h-8 sm:w-8 text-muted-foreground hover:text-foreground"
-              onClick={() => window.location.reload()}
-              title="Refresh Data"
-            >
-              <RefreshCw className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-            </Button>
-            <ModeToggle />
-          </div>
-        </div>
-      </header>
-
-      <div className="container mx-auto px-4 pb-12 space-y-16">
-        {/* Hero Section */}
+      <div className="container mx-auto px-4 pb-16 space-y-4">
         <HeroSection />
 
-        {/* Main Table Section */}
-        <section id="ipo-table-section" className="space-y-6 scroll-mt-20">
-          <div className="flex flex-col xl:flex-row gap-6 justify-between items-start xl:items-end">
-
-            {/* Filters */}
-            <div className="flex flex-col md:flex-row gap-6 w-full xl:w-auto">
-              {/* Status Group */}
-              <div className="space-y-2 w-full md:w-auto">
-                <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Status</label>
-
-                {/* Desktop Tabs */}
-                <div className="hidden md:block">
-                  <Tabs
+        <section id="ipo-table-section" className="space-y-4 scroll-mt-20">
+          <div className="p-4 rounded-2xl bg-gradient-to-br from-white to-gray-50/50 dark:from-gray-900/50 dark:to-gray-800/30 border border-border/50 shadow-sm">
+            <div className="flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center">
+              <div className="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
+                <div className="w-full md:w-auto">
+                  <div className="hidden md:block">
+                    <Tabs
+                      value={statusFilter}
+                      className="w-full"
+                      onValueChange={(val) => setStatusFilter(val as any)}
+                    >
+                      <TabsList className="grid w-full md:w-[400px] grid-cols-4 h-9">
+                        <TabsTrigger value="Current" className="text-xs">Current</TabsTrigger>
+                        <TabsTrigger value="Upcoming" className="text-xs">Upcoming</TabsTrigger>
+                        <TabsTrigger value="Closed" className="text-xs">Closed</TabsTrigger>
+                        <TabsTrigger value="All" className="text-xs">All</TabsTrigger>
+                      </TabsList>
+                    </Tabs>
+                  </div>
+                  <select
+                    className="md:hidden h-9 w-full rounded-lg border border-input bg-background px-3 py-1 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     value={statusFilter}
-                    className="w-full"
-                    onValueChange={(val) => setStatusFilter(val as any)}
+                    onChange={(e) => setStatusFilter(e.target.value as any)}
                   >
-                    <TabsList className="grid w-[400px] grid-cols-4 bg-muted/50">
-                      <TabsTrigger value="Current">Current</TabsTrigger>
-                      <TabsTrigger value="Upcoming">Upcoming</TabsTrigger>
-                      <TabsTrigger value="Closed">Closed</TabsTrigger>
-                      <TabsTrigger value="All">All</TabsTrigger>
-                    </TabsList>
-                  </Tabs>
+                    <option value="Current">Current</option>
+                    <option value="Upcoming">Upcoming</option>
+                    <option value="Closed">Closed</option>
+                    <option value="All">All Status</option>
+                  </select>
                 </div>
 
-                {/* Mobile Dropdown */}
-                <select
-                  className="md:hidden h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                  value={statusFilter}
-                  onChange={(e) => setStatusFilter(e.target.value as any)}
-                >
-                  <option value="Current">Current</option>
-                  <option value="Upcoming">Upcoming</option>
-                  <option value="Closed">Closed</option>
-                  <option value="All">All Status</option>
-                </select>
-              </div>
-
-              {/* Type Group */}
-              <div className="space-y-2 w-full md:w-auto">
-                <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Board Type</label>
-
-                {/* Desktop Tabs */}
-                <div className="hidden md:block">
-                  <Tabs
+                <div className="w-full md:w-auto">
+                  <div className="hidden md:block">
+                    <Tabs
+                      value={sectorFilter}
+                      className="w-full"
+                      onValueChange={(val) => setSectorFilter(val as any)}
+                    >
+                      <TabsList className="grid w-full md:w-[280px] grid-cols-3 h-9">
+                        <TabsTrigger value="All" className="text-xs">All</TabsTrigger>
+                        <TabsTrigger value="Mainline" className="text-xs">Mainboard</TabsTrigger>
+                        <TabsTrigger value="SME" className="text-xs">SME</TabsTrigger>
+                      </TabsList>
+                    </Tabs>
+                  </div>
+                  <select
+                    className="md:hidden h-9 w-full rounded-lg border border-input bg-background px-3 py-1 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     value={sectorFilter}
-                    className="w-full"
-                    onValueChange={(val) => setSectorFilter(val as any)}
+                    onChange={(e) => setSectorFilter(e.target.value as any)}
                   >
-                    <TabsList className="grid w-[280px] grid-cols-3 bg-muted/50">
-                      <TabsTrigger value="All">All</TabsTrigger>
-                      <TabsTrigger value="Mainline">Mainboard</TabsTrigger>
-                      <TabsTrigger value="SME">SME</TabsTrigger>
-                    </TabsList>
-                  </Tabs>
+                    <option value="All">All Boards</option>
+                    <option value="Mainline">Mainboard</option>
+                    <option value="SME">SME</option>
+                  </select>
                 </div>
-
-                {/* Mobile Dropdown */}
-                <select
-                  className="md:hidden h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                  value={sectorFilter}
-                  onChange={(e) => setSectorFilter(e.target.value as any)}
-                >
-                  <option value="All">All Boards</option>
-                  <option value="Mainline">Mainboard</option>
-                  <option value="SME">SME</option>
-                </select>
               </div>
-            </div>
 
-            {/* Search & Export */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full xl:w-auto items-end">
-              <div className="relative w-full xl:w-[400px] group">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
-                <Input
-                  type="search"
-                  placeholder="Search IPO..."
-                  className="pl-10 h-10 w-full bg-background border-input ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all shadow-sm"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
-              <Button variant="outline" className="h-10 px-4 whitespace-nowrap w-full sm:w-auto" onClick={handleExport}>
-                <Download className="mr-2 h-4 w-4" /> Export CSV
-              </Button>
-            </div>
-          </div>
-
-          {/* Active Filters & Counts */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between text-sm text-muted-foreground gap-4">
-            <div className="flex items-center gap-2">
-              <span>Showing <span className="font-bold text-foreground">{filteredData.length}</span> of {mockIpos.length} IPOs</span>
-              {(statusFilter !== 'Current' || sectorFilter !== 'All' || searchQuery) && (
+              <div className="flex flex-row gap-2 w-full lg:w-auto">
+                <div className="relative flex-grow lg:flex-grow-0 lg:w-[240px] group">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                  <Input
+                    type="search"
+                    placeholder="Search IPO..."
+                    className="pl-9 pr-4 h-9 text-sm"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
                 <Button
-                  variant="ghost"
-                  size="sm"
-                  className="h-6 px-2 text-xs hover:bg-destructive/10 hover:text-destructive"
-                  onClick={() => {
-                    setStatusFilter('Current');
-                    setSectorFilter('All');
-                    setSearchQuery('');
-                  }}
+                  variant="outline"
+                  className="h-9 px-4 whitespace-nowrap text-xs"
+                  onClick={handleExport}
                 >
-                  <X className="mr-1 h-3 w-3" />
-                  Clear Filters
+                  <Download className="mr-2 h-3.5 w-3.5" /> Export
                 </Button>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between text-sm text-muted-foreground gap-4 mt-6 pt-6 border-t border-border/50">
+              <div className="flex items-center gap-3">
+                <span>Showing <span className="font-bold text-foreground">{filteredData.length}</span> of {mockIpos.length} IPOs</span>
+                {(statusFilter !== 'Current' || sectorFilter !== 'All' || searchQuery) && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="h-8 px-3 text-xs hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/50 dark:hover:text-red-400 rounded-lg"
+                    onClick={() => {
+                      setStatusFilter('Current');
+                      setSectorFilter('All');
+                      setSearchQuery('');
+                    }}
+                  >
+                    <X className="mr-1 h-3 w-3" />
+                    Clear Filters
+                  </Button>
+                )}
+              </div>
+              {(statusFilter !== 'Current' || sectorFilter !== 'All' || searchQuery) && (
+                <Badge variant="secondary" className="text-xs font-normal">
+                  {[
+                    statusFilter !== 'Current' ? statusFilter : null,
+                    sectorFilter !== 'All' ? `${sectorFilter} Board` : null,
+                    searchQuery ? `"${searchQuery}"` : null
+                  ].filter(Boolean).length} Active Filters
+                </Badge>
               )}
             </div>
-            {/* Dynamic Filter Badge */}
-            {(statusFilter !== 'Current' || sectorFilter !== 'All' || searchQuery) && (
-              <Badge variant="secondary" className="text-xs font-normal">
-                {[
-                  statusFilter !== 'Current' ? statusFilter : null,
-                  sectorFilter !== 'All' ? `${sectorFilter} Board` : null,
-                  searchQuery ? `Search: "${searchQuery}"` : null
-                ].filter(Boolean).length} Active Filters
-              </Badge>
-            )}
           </div>
 
           <IPOTable data={filteredData} />
         </section>
 
-        {/* Secondary Sections */}
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <TrendingSection ipos={mockIpos as IPOData[]} />
@@ -270,47 +205,147 @@ export default function Home() {
       <IPOModal />
       <MarketPulse />
 
-      {/* URL Synchronization */}
       <Suspense fallback={null}>
         <URLSync />
       </Suspense>
 
-      {/* SEO Content Section */}
-      <section className="container mx-auto px-4 py-12 prose prose-sm dark:prose-invert max-w-none text-muted-foreground border-t">
-        <h2 className="text-foreground font-bold text-2xl mb-4">India's Premier Live IPO Tracker & GMP Analysis</h2>
-        <p>
-          Welcome to <strong className="text-foreground">GMP AI IPO</strong>, the most advanced <strong>IPO tracker for India</strong>.
-          We provide real-time updates on <strong className="text-foreground">live GMP (Grey Market Premium)</strong>,
-          subscription status, and listing estimates for both <strong>Mainboard IPOs</strong> and <strong>SME IPOs</strong>.
-        </p>
-        <div className="grid md:grid-cols-2 gap-8 mt-6">
-          <div>
-            <h3 className="text-foreground font-semibold text-lg mb-2">Why Track GMP Live?</h3>
-            <p>
-              The <em>Grey Market Premium</em> is a key indicator of market sentiment. Our <strong>live GMP tracker</strong> helps investors
-              gauge potential listing gains before the official listing date. Whether you are tracking a massive Mainboard launch or a
-              fast-moving SME IPO, getting accurate GMP data is crucial for making informed application decisions.
+      <section className="container mx-auto px-4 py-16 space-y-16 border-t border-border/50">
+
+        {/* Core Value Proposition - Why We Are Different */}
+        <div className="max-w-5xl mx-auto space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold gradient-text">India's #1 Market Hub: IPO Bazar</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
+              Welcome to <strong className="text-foreground">IPO Bazar</strong>, the definitive marketplace for IPO intelligence. We combine real-time Grey Market Premium (GMP) data with AI-driven analytics to give you the winning edge.
             </p>
           </div>
-          <div>
-            <h3 className="text-foreground font-semibold text-lg mb-2">Comprehensive IPO Analysis</h3>
-            <p>
-              Beyond just prices, we offer detailed <strong>IPO subscription status</strong> updates for Retail, HNI, and QIB categories.
-              Our AI-driven verdict helps simplify complex financial data into actionable insights, making us the reliable
-              destination for <strong>Indian IPO analysis</strong>.
-            </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-6 rounded-2xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-indigo-600 dark:text-indigo-400">⚡ Market Pulse</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Just like a bustling bazar, our prices update constantly. We aggregate GMP from street brokers and private networks every 5 minutes.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-purple-600 dark:text-purple-400">🤖 Smart Insights</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Filter the noise. Our AI analyzes 50+ signal points to tell you if an IPO is a "Must Buy" or a "Risky Bet" instantly.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-pink-600 dark:text-pink-400">📊 Complete Coverage</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                From tiny SME gems to massive Mainboard giants, <strong className="text-foreground">IPO Bazar</strong> lists everything available in the Indian market.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* About Us & Mission */}
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold">About IPO Bazar</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Founded by financial veterans, <strong className="text-foreground">IPO Bazar</strong> was built to illuminate the "Grey Market". For too long, GMP data was hidden in private WhatsApp groups.
+              </p>
+              <p>
+                We brought it to the open market. By tracking unstructured data and official NSE/BSE figures, we created a central hub where every retail investor can see the true demand for a stock before listing.
+              </p>
+            </div>
+          </div>
+          <div className="p-8 rounded-3xl bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 border border-indigo-100 dark:border-indigo-900/50">
+            <h3 className="text-xl font-bold mb-4">Why Trust IPO Bazar?</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-sm text-muted-foreground">Direct API integration with NSE & BSE for official stats.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-sm text-muted-foreground">Manual verification of GMP from credible market brokers.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-sm text-muted-foreground">Historical data tracking to identify manipulation trends.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-sm text-muted-foreground">Unbiased analysis: We are not a brokerage and do not sell IPO applications.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Enhanced FAQ Section for SEO */}
+        <div className="max-w-4xl mx-auto pt-8 border-t border-border/30">
+          <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions (FAQs)</h2>
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg text-foreground">What is Grey Market Premium (GMP)?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                GMP is the premium amount at which IPO shares are traded in the unofficial market before they list on the stock exchange. A high GMP often suggests a strong listing gain.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg text-foreground">How accurate is the GMP data on this site?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                We update GMP multiple times a day based on credible market sources. However, GMP is volatile and unregulated; it should be used as an indicator, not a guarantee.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg text-foreground">How do I check my IPO Allotment Status?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Visit our <a href="/ipo-allotment-status" className="text-indigo-500 hover:underline">Allotment Status page</a>, select your IPO, and enter your PAN or Application Number. We support KFintech, LinkIntime, Bigshare, and other registrars.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg text-foreground">What is the difference between SME and Mainboard IPOs?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <strong>Mainboard IPOs</strong> are larger companies listing on NSE/BSE with a minimum investment of ₹14-15k. <strong>SME IPOs</strong> are smaller companies with a minimum investment of ₹1L+ and higher risk/reward ratios.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg text-foreground">Does applying in the HNI category increase allotment chances?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                In oversubscribed IPOs, the HNI (NII) category allotment is often proportional. Applying for more lots increases your chances compared to the Retail category, where allotment is lottery-based.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg text-foreground">What is Kostak Rate and Subject over Sauda?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <strong>Kostak</strong> is the fixed amount paid for your IPO application regardless of allotment. <strong>Subject to Sauda</strong> is a deal where the premium is paid only if you get the allotment.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t py-8 mt-12 bg-muted/20">
-        <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} GMP AI IPO. Data is for informational purposes only.</p>
-          <p className="mt-2">Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+      <footer className="border-t border-border/50 py-8 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4 text-center space-y-6">
+          <div className="space-y-3">
+            <p className="text-muted-foreground text-sm">
+              © {new Date().getFullYear()} GMP AI IPO. Data is for informational purposes only.
+            </p>
+            <p className="text-xs text-muted-foreground/70">
+              Investments in securities market are subject to market risks. Read all related documents carefully before investing.
+            </p>
+          </div>
+
+          <div className="pt-6 border-t border-border/30 max-w-2xl mx-auto space-y-2">
+            <p className="text-xs text-muted-foreground">
+              <span className="font-semibold">Author:</span> IPO Analysis Team | GMP AI IPO
+            </p>
+            <p className="text-xs text-muted-foreground" suppressHydrationWarning>
+              <span className="font-semibold">Last Updated:</span> {new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </p>
+            <p className="text-xs text-muted-foreground/80 italic">
+              About the Author: Professional financial analysts specializing in Indian IPO market analysis and real-time GMP tracking.
+            </p>
+          </div>
         </div>
       </footer>
     </main>
   );
 }
-

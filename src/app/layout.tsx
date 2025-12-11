@@ -6,47 +6,41 @@ import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
 
 import SchemaMarkup from "@/components/SEO/SchemaMarkup";
+import { Navbar } from "@/components/layout/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Live IPO Tracker India 2025 | Real-time GMP Analysis & SME IPO Updates",
-  description: "Track 185+ live Indian IPOs with real-time GMP, subscription status & AI analysis. Get SME IPO updates, grey market premiums & investment verdicts instantly.",
-  keywords: "IPO tracker India, live GMP tracker, IPO subscription, Indian IPO analysis, SME IPO, Mainboard IPO, GMP live, IPO allotment status, NSE IPO, BSE IPO",
-  authors: [{ name: "GMP AI IPO Team" }],
+  title: "IPO Bazar - Live Indian IPO Tracker 2025 | Real-time GMP & Allotment Status",
+  description: "Track 185+ live Indian IPOs on IPO Bazar. Get real-time GMP, subscription status, AI analysis & allotment updates for Mainboard & SME IPOs.",
+  keywords: "IPO Bazar, IPO tracker, live GMP, IPO allotment status, Indian stock market, SME IPO, Mainboard IPO, IPO news",
+  authors: [{ name: "IPO Bazar Team" }],
   metadataBase: new URL('https://ipo-ai-ui.netlify.app'),
   alternates: {
     canonical: '/',
   },
-  other: {
-    "author": "GMP AI IPO Team",
-    "publish_date": "2025-12-11",
-    "article:published_time": "2025-12-11T20:00:00Z",
-    "article:author": "IPO Analysis Team",
-    "google-site-verification": "G-HLS540NE6V", // Keeping existing GA ID if needed for verification
-  },
   openGraph: {
     type: "website",
-    title: "Live IPO Tracker India 2025 | Real-time GMP",
-    description: "Track 185+ live Indian IPOs with real-time GMP, subscription status & AI analysis. Get SME IPO updates, grey market premiums & investment verdicts instantly.",
+    title: "IPO Bazar - Live Indian IPO Tracker 2025",
+    description: "Your #1 Market Hub for IPOs. Track real-time GMP, subscription status & AI analysis for all Indian IPOs.",
     url: 'https://ipo-ai-ui.netlify.app',
-    siteName: 'GMP AI IPO',
+    siteName: 'IPO Bazar',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Live IPO Tracker India 2025 Preview',
+        alt: 'IPO Bazar Preview',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: "summary_large_image",
-    title: "Live IPO Tracker India 2025 | Real-time GMP",
-    description: "Track 185+ live Indian IPOs with real-time GMP, subscription status & AI analysis.",
+    title: "IPO Bazar - Live Indian IPO Tracker 2025",
+    description: "Your #1 Market Hub for IPOs. Track real-time GMP, subscription status & AI analysis for all Indian IPOs.",
     images: ["/og-image.png"],
-    creator: "@ipo_watch",
+    creator: "@ipo_bazar",
   },
   robots: {
     index: true,
@@ -63,6 +57,12 @@ export const metadata: Metadata = {
     icon: '/icon.png',
     apple: '/apple-icon.png',
   },
+  other: {
+    "author": "IPO Bazar Team",
+    "publish_date": "2025-12-11",
+    "article:published_time": "2025-12-11T20:00:00Z",
+    "article:author": "IPO Bazar Analysis Team",
+  }
 };
 
 export const viewport: Viewport = {
@@ -99,6 +99,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
           <Toaster />
         </ThemeProvider>

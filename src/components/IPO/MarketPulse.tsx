@@ -3,6 +3,7 @@
 import { useMemo, useState, useEffect } from "react";
 import ipoData from "@/data/mockIpos.json";
 import { TrendingUp, TrendingDown, Activity } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function MarketPulse() {
     const [isVisible, setIsVisible] = useState(false);
@@ -24,10 +25,9 @@ export function MarketPulse() {
             clearTimeout(timeoutId);
             timeoutId = setTimeout(() => {
                 setIsVisible(true);
-            }, 2000); // Show after 2 seconds of idleness
+            }, 2000);
         };
 
-        // Initial trigger
         timeoutId = setTimeout(() => setIsVisible(true), 2000);
 
         window.addEventListener("scroll", handleActivity);
@@ -44,30 +44,47 @@ export function MarketPulse() {
         };
     }, []);
 
-    if (!isVisible) return null;
-
     return (
-        <div className="hidden md:flex fixed bottom-8 right-8 z-50 flex-col gap-4 animate-in fade-in zoom-in duration-500 pointer-events-none">
-            {/* Positive Sentiment Bubble */}
-            <div className="flex flex-col items-center justify-center w-16 h-16 rounded-full bg-green-500/10 dark:bg-green-500/20 text-green-700 dark:text-green-400 shadow-lg shadow-green-500/10 animate-bounce-slow backdrop-blur-md border border-green-500/20 pointer-events-auto cursor-default hover:scale-110 transition-transform">
-                <TrendingUp className="w-4 h-4 mb-0.5" />
-                <span className="text-sm font-bold">{stats.positive}</span>
-                <span className="text-[8px] font-medium uppercase opacity-80">Pos</span>
-            </div>
+        <AnimatePresence>
+            {isVisible && (
+                <motion.div
+                    className="hidden md:flex fixed bottom-8 right-8 z-50 flex-col gap-3 pointer-events-none"
+                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.8, y: 20 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <motion.div
+                        className="flex flex-col items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400/20 to-emerald-500/20 text-green-700 dark:text-green-400 shadow-lg shadow-green-500/10 backdrop-blur-xl border border-green-500/20 pointer-events-auto cursor-default hover:scale-110 transition-transform"
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    >
+                        <TrendingUp className="w-4 h-4 mb-0.5" />
+                        <span className="text-sm font-bold">{stats.positive}</span>
+                        <span className="text-[8px] font-medium uppercase opacity-80">Bullish</span>
+                    </motion.div>
 
-            {/* Avg GMP Bubble */}
-            <div className="flex flex-col items-center justify-center w-16 h-16 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 shadow-lg shadow-blue-500/10 animate-bounce-delayed backdrop-blur-md border border-blue-500/20 pointer-events-auto cursor-default hover:scale-110 transition-transform">
-                <Activity className="w-4 h-4 mb-0.5" />
-                <span className="text-sm font-bold">{stats.avgGmp}%</span>
-                <span className="text-[8px] font-medium uppercase opacity-80">Avg</span>
-            </div>
+                    <motion.div
+                        className="flex flex-col items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-400/20 to-purple-500/20 text-indigo-700 dark:text-indigo-400 shadow-lg shadow-indigo-500/10 backdrop-blur-xl border border-indigo-500/20 pointer-events-auto cursor-default hover:scale-110 transition-transform"
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                    >
+                        <Activity className="w-4 h-4 mb-0.5" />
+                        <span className="text-sm font-bold">{stats.avgGmp}%</span>
+                        <span className="text-[8px] font-medium uppercase opacity-80">Avg GMP</span>
+                    </motion.div>
 
-            {/* Negative Sentiment Bubble */}
-            <div className="flex flex-col items-center justify-center w-16 h-16 rounded-full bg-red-500/10 dark:bg-red-500/20 text-red-700 dark:text-red-400 shadow-lg shadow-red-500/10 animate-bounce-slower backdrop-blur-md border border-red-500/20 pointer-events-auto cursor-default hover:scale-110 transition-transform">
-                <TrendingDown className="w-4 h-4 mb-0.5" />
-                <span className="text-sm font-bold">{stats.negative}</span>
-                <span className="text-[8px] font-medium uppercase opacity-80">Neg</span>
-            </div>
-        </div>
+                    <motion.div
+                        className="flex flex-col items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-red-400/20 to-rose-500/20 text-red-700 dark:text-red-400 shadow-lg shadow-red-500/10 backdrop-blur-xl border border-red-500/20 pointer-events-auto cursor-default hover:scale-110 transition-transform"
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                    >
+                        <TrendingDown className="w-4 h-4 mb-0.5" />
+                        <span className="text-sm font-bold">{stats.negative}</span>
+                        <span className="text-[8px] font-medium uppercase opacity-80">Bearish</span>
+                    </motion.div>
+                </motion.div>
+            )}
+        </AnimatePresence>
     );
 }

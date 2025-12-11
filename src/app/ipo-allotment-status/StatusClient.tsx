@@ -2,20 +2,22 @@
 
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Search } from "lucide-react";
+import { ArrowLeft, ExternalLink, Search, ChevronLeft, ChevronRight, Info } from "lucide-react";
 import { useState, useMemo } from 'react';
 import { Input } from "@/components/ui/input";
 import mockIpos from "@/data/mockIpos.json";
 import ipoRegistrarsMap from "@/data/ipo-registrars-map.json";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 type SectorFilter = 'All' | 'SME' | 'Mainline';
 
 export default function StatusClient() {
     const [searchQuery, setSearchQuery] = useState("");
     const [sectorFilter, setSectorFilter] = useState<SectorFilter>('All');
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 8;
 
     const openStatusPopup = (url: string) => {
-        // Open a popup window with specific dimensions
         const width = 1000;
         const height = 800;
         const left = (window.screen.width - width) / 2;
@@ -73,6 +75,18 @@ export default function StatusClient() {
             });
     }, [searchQuery, sectorFilter]);
 
+    // Pagination Logic
+    const totalPages = Math.ceil(filteredIpos.length / itemsPerPage) || 1;
+    const paginatedIpos = useMemo(() => {
+        const start = (currentPage - 1) * itemsPerPage;
+        return filteredIpos.slice(start, start + itemsPerPage);
+    }, [filteredIpos, currentPage]);
+
+    // Reset pagination when filters change
+    useMemo(() => {
+        setCurrentPage(1);
+    }, [searchQuery, sectorFilter]);
+
     return (
         <div className="min-h-screen flex flex-col bg-background text-foreground">
             {/* Header */}
@@ -88,6 +102,22 @@ export default function StatusClient() {
                         <div className="h-6 w-px bg-border/50 hidden sm:block"></div>
                         <h1 className="text-lg font-bold tracking-tight">IPO Allotment Status</h1>
                     </div>
+                </div>
+            </div>
+
+            {/* Info Section */}
+            <div className="bg-muted/20 border-b border-border">
+                <div className="max-w-7xl mx-auto px-4 py-4">
+                    <Alert className="bg-blue-50/50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-900">
+                        <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                        <AlertTitle className="text-blue-800 dark:text-blue-300">How to Check Allotment Status?</AlertTitle>
+                        <AlertDescription className="text-blue-700/80 dark:text-blue-400/80 text-xs mt-1">
+                            1. Select the IPO from the list below. <br />
+                            2. Click on "Check Status" to visit the official registrar's portal.<br />
+                            3. Select the IPO Name from the dropdown on the registrar's site.<br />
+                            4. Enter your PAN Number, Application Number, or DP Client ID.
+                        </AlertDescription>
+                    </Alert>
                 </div>
             </div>
 
@@ -129,36 +159,53 @@ export default function StatusClient() {
             {/* Table Container */}
             <div className="flex-1 overflow-auto">
                 <div className="max-w-7xl mx-auto px-4 py-6">
-                    <div className="border rounded-lg overflow-hidden bg-card">
+                    <div className="border rounded-lg overflow-hidden bg-card shadow-sm">
                         <div className="overflow-x-auto">
                             <table className="w-full">
                                 <thead className="bg-muted/50 border-b">
                                     <tr>
-                                        <th className="text-left p-4 font-semibold text-sm">Symbol</th>
+                                        <th className="text-left p-4 font-semibold text-sm">Company Details</th>
+                                        <th className="text-left p-4 font-semibold text-sm">Price & Subscription</th>
                                         <th className="text-left p-4 font-semibold text-sm">Listing Date</th>
                                         <th className="text-left p-4 font-semibold text-sm">GMP</th>
-                                        <th className="text-left p-4 font-semibold text-sm">Registrar</th>
-                                        <th className="text-center p-4 font-semibold text-sm">Check Status</th>
+                                        <th className="text-center p-4 font-semibold text-sm">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {filteredIpos.length === 0 ? (
+                                    {paginatedIpos.length === 0 ? (
                                         <tr>
                                             <td colSpan={5} className="text-center p-8 text-muted-foreground">
                                                 No IPOs found matching your search
                                             </td>
                                         </tr>
                                     ) : (
-                                        filteredIpos.map((ipo) => (
+                                        paginatedIpos.map((ipo) => (
                                             <tr key={ipo.id} className="border-b last:border-0 hover:bg-muted/30 transition-colors">
                                                 <td className="p-4">
-                                                    <div className="flex flex-col">
-                                                        <span className="font-medium">{ipo.companyName}</span>
-                                                        <span className="text-xs text-muted-foreground">{ipo.sector}</span>
+                                                    <div className="flex flex-col gap-1">
+                                                        <span className="font-semibold text-base">{ipo.companyName}</span>
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground font-medium">
+                                                                {ipo.sector}
+                                                            </span>
+                                                            <span className="text-xs text-muted-foreground truncate max-w-[150px]">
+                                                                {ipo.id}
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </td>
                                                 <td className="p-4">
-                                                    <span className="text-sm" suppressHydrationWarning>
+                                                    <div className="flex flex-col gap-1">
+                                                        <div className="text-sm font-medium">
+                                                            {ipo.priceRange}
+                                                        </div>
+                                                        <div className="text-xs text-muted-foreground">
+                                                            Subscribed: <span className="font-medium text-foreground">{ipo.subscribed}</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td className="p-4">
+                                                    <span className="text-sm bg-muted/50 px-2 py-1 rounded-md" suppressHydrationWarning>
                                                         {ipo.listingDate === "TBD" ? "TBD" : new Date(ipo.listingDate).toLocaleDateString('en-IN', {
                                                             day: 'numeric',
                                                             month: 'short',
@@ -172,7 +219,7 @@ export default function StatusClient() {
                                                             <span className="font-medium text-green-600 dark:text-green-400">
                                                                 ₹{ipo.gmp}
                                                             </span>
-                                                            {(ipo.gmpPercent ?? 0) > 0 && (
+                                                            {ipo.gmpPercent !== null && ipo.gmpPercent > 0 && (
                                                                 <span className="text-xs text-muted-foreground">
                                                                     +{ipo.gmpPercent}%
                                                                 </span>
@@ -182,14 +229,11 @@ export default function StatusClient() {
                                                         <span className="text-sm text-muted-foreground">-</span>
                                                     )}
                                                 </td>
-                                                <td className="p-4">
-                                                    <span className="text-sm text-muted-foreground">{ipo.registrar.name}</span>
-                                                </td>
                                                 <td className="p-4 text-center">
                                                     <Button
                                                         size="sm"
-                                                        variant="outline"
-                                                        className="gap-2"
+                                                        variant="default"
+                                                        className="gap-2 w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-0 shadow-sm"
                                                         onClick={() => openStatusPopup(ipo.registrar.link)}
                                                     >
                                                         Check Status <ExternalLink className="h-3 w-3" />
@@ -202,17 +246,53 @@ export default function StatusClient() {
                             </table>
                         </div>
                     </div>
+
+                    {/* Pagination Controls */}
+                    {totalPages > 1 && (
+                        <div className="flex items-center justify-between mt-6 border-t pt-6">
+                            <div className="text-sm text-muted-foreground">
+                                Page <span className="font-medium">{currentPage}</span> of <span className="font-medium">{totalPages}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="h-8 w-8 p-0"
+                                    onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                                    disabled={currentPage === 1}
+                                >
+                                    <ChevronLeft className="h-4 w-4" />
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="h-8 w-8 p-0"
+                                    onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                                    disabled={currentPage === totalPages}
+                                >
+                                    <ChevronRight className="h-4 w-4" />
+                                </Button>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
             {/* Footer */}
-            <div className="bg-muted/80 border-t border-border p-3 text-center backdrop-blur-sm">
-                <p className="text-[11px] font-medium text-muted-foreground">
+            <div className="bg-muted/80 border-t border-border p-6 text-center backdrop-blur-sm space-y-6">
+                <p className="text-sm font-medium text-muted-foreground">
                     Click "Check Status" to verify your allotment with the official registrar
                 </p>
+
+                <div className="pt-4 border-t border-border/30 max-w-2xl mx-auto space-y-2">
+                    <p className="text-xs text-muted-foreground">
+                        <span className="font-semibold">Author:</span> IPO Analysis Team | GMP AI IPO
+                    </p>
+                    <p className="text-xs text-muted-foreground/80 italic">
+                        About the Author: Professional financial analysts specializing in Indian IPO market analysis and real-time GMP tracking.
+                    </p>
+                </div>
             </div>
-
-
         </div>
     );
 }

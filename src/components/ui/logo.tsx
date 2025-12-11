@@ -451,7 +451,7 @@ export function LogoOption8({ className = "h-10 w-10" }: { className?: string })
 export function LogoOption9({ className = "h-10 w-10" }: { className?: string }) {
     return (
         <div className={`relative ${className}`}>
-            <svg viewBox="0 0 100 100" className="w-full h-full">
+            <svg viewBox="0 0 100 100" className="w-full h-full" role="img" aria-label="IPO Bazar Logo">
                 <defs>
                     <linearGradient id="coinGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#fbbf24" />

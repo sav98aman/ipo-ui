@@ -52,7 +52,7 @@ export const tableColumns: ColumnDef<IPOData>[] = [
                     <div className={`relative h-12 w-12 overflow-hidden bg-white flex-shrink-0 ${borderClass} group cursor-help`}>
                         <img
                             src={ipo.logo}
-                            alt={ipo.companyName}
+                            alt={`${ipo.companyName} IPO live tracker`}
                             className="h-full w-full object-contain p-1 transition-all duration-300 group-hover:opacity-10 filter group-hover:blur-[1px]"
                         />
                         <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 export default function SchemaMarkup() {
-    const webAppSchema = {
+    const schemaData = {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "IPO Watch - Live Indian IPO Tracker",
@@ -27,17 +27,9 @@ export default function SchemaMarkup() {
         "image": "https://ipo-ai-ui.netlify.app/icon.png",
         "publisher": {
             "@type": "Organization",
-            "name": "GMP AI IPO",
+            "name": "GMP AI IPO Team",
             "logo": "https://ipo-ai-ui.netlify.app/icon.png"
-        }
-    };
-
-    const websiteSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "IPO Watch",
-        "url": "https://ipo-ai-ui.netlify.app",
-        "description": "Live Indian IPO tracker with real-time GMP analysis",
+        },
         "creator": "GMP AI IPO Team"
     };
 
@@ -93,12 +85,28 @@ export default function SchemaMarkup() {
         ]
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ipo-ai-ui.netlify.app"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IPO Allotment Status",
+            "item": "https://ipo-ai-ui.netlify.app/ipo-allotment-status"
+        }]
+    };
+
     return (
         <>
-            <Script id="schema-webapp" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
-            <Script id="schema-website" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+            <Script id="schema-webapp" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
             <Script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <Script id="schema-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         </>
     );
 }
