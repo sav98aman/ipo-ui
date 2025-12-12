@@ -14,7 +14,7 @@
     "listingDate": "2025-12-15",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:46:51.728+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:16.212+05:30",
     "subscribed": "0.54x",
     "retail": "0.00x",
     "qib": "0.00x",
@@ -60,7 +60,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -81,7 +81,7 @@
     "listingDate": "2025-12-17",
     "gmp": 17.5,
     "gmpPercent": 3.8,
-    "gmpLastUpdated": "2025-12-12T03:46:50.247+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:13.027+05:30",
     "subscribed": "0.37x",
     "retail": "0.47x",
     "qib": "0.29x",
@@ -128,6 +128,11 @@
       },
       {
         "date": "2025-12-11",
+        "gmp": 17.5,
+        "gmpPercent": 3.8
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 17.5,
         "gmpPercent": 3.8
       }
@@ -372,7 +377,7 @@
     "companyName": "ICICI Prudential AMC",
     "logo": "https://assets-netstorage.groww.in/stock-assets/logos2/ICICI%20Prudential%20AMC.png",
     "sector": "Mainline",
-    "status": "Upcoming",
+    "status": "Current",
     "openDate": "2025-12-12",
     "prospectusUrl": "#",
     "closeDate": "2025-12-16",
@@ -382,7 +387,7 @@
     "listingDate": "2025-12-19",
     "gmp": 138,
     "gmpPercent": 6.37,
-    "gmpLastUpdated": "2025-12-12T03:46:45.224+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:09.519+05:30",
     "subscribed": "0.00x",
     "retail": "0.00x",
     "qib": "0.00x",
@@ -424,6 +429,11 @@
       },
       {
         "date": "2025-12-11",
+        "gmp": 138,
+        "gmpPercent": 6.37
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 138,
         "gmpPercent": 6.37
       }
@@ -1042,7 +1052,7 @@
     "listingDate": "2025-12-10",
     "gmp": 3,
     "gmpPercent": 5.77,
-    "gmpLastUpdated": "2025-12-12T03:46:59.804+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:25.008+05:30",
     "retail": "29.98x",
     "qib": "5.45x",
     "nii": "55.94x",
@@ -1093,7 +1103,7 @@
         "gmpPercent": 5.77
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 3,
         "gmpPercent": 5.77
       }
@@ -1114,7 +1124,7 @@
     "listingDate": "2025-12-10",
     "gmp": 46.5,
     "gmpPercent": 37.5,
-    "gmpLastUpdated": "2025-12-12T03:47:01.628+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:26.944+05:30",
     "retail": "23.68x",
     "qib": "0.69x",
     "nii": "9.99x",
@@ -1165,7 +1175,7 @@
         "gmpPercent": 37.5
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 46.5,
         "gmpPercent": 37.5
       }
@@ -1186,7 +1196,7 @@
     "listingDate": "2025-12-10",
     "gmp": 46,
     "gmpPercent": 41.44,
-    "gmpLastUpdated": "2025-12-12T03:47:02.529+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:27.639+05:30",
     "retail": "7.07x",
     "qib": "2.19x",
     "nii": "5.17x",
@@ -1237,7 +1247,7 @@
         "gmpPercent": 41.44
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 46,
         "gmpPercent": 41.44
       }
@@ -1258,7 +1268,7 @@
     "listingDate": "2025-12-15",
     "gmp": 2,
     "gmpPercent": 1.03,
-    "gmpLastUpdated": "2025-12-12T03:46:53.055+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:17.905+05:30",
     "retail": "1.81x",
     "qib": "0.00x",
     "nii": "0.25x",
@@ -1319,7 +1329,7 @@
         "gmpPercent": 1.03
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 2,
         "gmpPercent": 1.03
       }
@@ -1340,7 +1350,7 @@
     "listingDate": "2025-12-15",
     "gmp": 257,
     "gmpPercent": 24.2,
-    "gmpLastUpdated": "2025-12-12T03:46:53.846+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:18.888+05:30",
     "retail": "6.86x",
     "qib": "1.76x",
     "nii": "28.34x",
@@ -1391,7 +1401,7 @@
         "gmpPercent": 24.2
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 257,
         "gmpPercent": 24.2
       }
@@ -1412,7 +1422,7 @@
     "listingDate": "2025-12-10",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:00.833+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:25.969+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.27x",
@@ -1453,7 +1463,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -1474,7 +1484,7 @@
     "listingDate": "2025-12-11",
     "gmp": 90,
     "gmpPercent": 109.76,
-    "gmpLastUpdated": "2025-12-12T03:46:58.106+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:24.005+05:30",
     "retail": "0.00x",
     "qib": "0.01x",
     "nii": "73.88x",
@@ -1530,7 +1540,7 @@
         "gmpPercent": 109.76
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 90,
         "gmpPercent": 109.76
       }
@@ -1551,7 +1561,7 @@
     "listingDate": "2025-12-11",
     "gmp": 2,
     "gmpPercent": 3.57,
-    "gmpLastUpdated": "2025-12-12T03:46:59.061+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:23.208+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.33x",
@@ -1602,7 +1612,7 @@
         "gmpPercent": 3.57
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 2,
         "gmpPercent": 3.57
       }
@@ -1623,7 +1633,7 @@
     "listingDate": "2025-12-12",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:46:56.452+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:21.488+05:30",
     "retail": "0.00x",
     "qib": "1.05x",
     "nii": "0.66x",
@@ -1674,7 +1684,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -1695,7 +1705,7 @@
     "listingDate": "2025-12-12",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:46:57.096+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:22.420+05:30",
     "retail": "0.00x",
     "qib": "1.56x",
     "nii": "3.47x",
@@ -1746,7 +1756,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -1767,7 +1777,7 @@
     "listingDate": "2025-10-01",
     "gmp": 4,
     "gmpPercent": 4,
-    "gmpLastUpdated": "2025-12-12T03:48:12.228+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:37.052+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -1803,7 +1813,7 @@
         "gmpPercent": 4
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 4,
         "gmpPercent": 4
       }
@@ -1824,7 +1834,7 @@
     "listingDate": "2025-12-15",
     "gmp": 90,
     "gmpPercent": 37.66,
-    "gmpLastUpdated": "2025-12-12T03:46:54.498+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:19.660+05:30",
     "retail": "0.00x",
     "qib": "1.36x",
     "nii": "22.57x",
@@ -1875,7 +1885,7 @@
         "gmpPercent": 37.66
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 90,
         "gmpPercent": 37.66
       }
@@ -1896,7 +1906,7 @@
     "issueSize": "₹44.97 Cr",
     "gmp": 4,
     "gmpPercent": 4.08,
-    "gmpLastUpdated": "2025-12-12T03:47:03.147+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:29.180+05:30",
     "retail": "0.00x",
     "qib": "1.23x",
     "nii": "7.02x",
@@ -1962,7 +1972,7 @@
         "gmpPercent": 4.08
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 4,
         "gmpPercent": 4.08
       }
@@ -1983,7 +1993,7 @@
     "issueSize": "₹10.96 Cr",
     "gmp": 9,
     "gmpPercent": 7.63,
-    "gmpLastUpdated": "2025-12-12T03:47:04.037+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:28.454+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "9.33x",
@@ -2039,7 +2049,7 @@
         "gmpPercent": 7.63
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 9,
         "gmpPercent": 7.63
       }
@@ -2060,7 +2070,7 @@
     "issueSize": "₹24.10 Cr",
     "gmp": 65,
     "gmpPercent": 50,
-    "gmpLastUpdated": "2025-12-12T03:47:08.364+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:33.397+05:30",
     "retail": "0.00x",
     "qib": "6.86x",
     "nii": "148.16x",
@@ -2121,7 +2131,7 @@
         "gmpPercent": 50
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 65,
         "gmpPercent": 50
       }
@@ -2142,7 +2152,7 @@
     "issueSize": "₹28.12 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:07.297+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:32.627+05:30",
     "retail": "0.00x",
     "qib": "1.55x",
     "nii": "0.74x",
@@ -2193,7 +2203,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2214,7 +2224,7 @@
     "issueSize": "₹85.60 Cr",
     "gmp": 11,
     "gmpPercent": 8.33,
-    "gmpLastUpdated": "2025-12-12T03:47:06.589+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:29.991+05:30",
     "retail": "0.00x",
     "qib": "3.46x",
     "nii": "2.36x",
@@ -2300,7 +2310,7 @@
         "gmpPercent": 8.33
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 11,
         "gmpPercent": 8.33
       }
@@ -2321,7 +2331,7 @@
     "issueSize": "₹33.73 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:05.956+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:31.566+05:30",
     "retail": "0.00x",
     "qib": "0.49x",
     "nii": "0.81x",
@@ -2367,7 +2377,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2388,7 +2398,7 @@
     "issueSize": "₹18.40 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:04.964+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:30.744+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.28x",
@@ -2434,7 +2444,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2455,7 +2465,7 @@
     "issueSize": "₹31.45 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:10.703+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:36.200+05:30",
     "retail": "0.00x",
     "qib": "11.85x",
     "nii": "7.69x",
@@ -2511,7 +2521,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2532,7 +2542,7 @@
     "issueSize": "₹37.45 Cr",
     "gmp": 131,
     "gmpPercent": 93.57,
-    "gmpLastUpdated": "2025-12-12T03:47:09.176+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:34.439+05:30",
     "retail": "0.00x",
     "qib": "8.22x",
     "nii": "81.24x",
@@ -2573,7 +2583,7 @@
         "gmpPercent": 93.57
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 131,
         "gmpPercent": 93.57
       }
@@ -2594,7 +2604,7 @@
     "issueSize": "₹36.30 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:09.869+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:35.498+05:30",
     "retail": "0.00x",
     "qib": "1.32x",
     "nii": "0.73x",
@@ -2645,7 +2655,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2666,7 +2676,7 @@
     "issueSize": "₹28.50 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:12.665+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:37.964+05:30",
     "retail": "0.00x",
     "qib": "5.71x",
     "nii": "1.60x",
@@ -2717,7 +2727,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2738,7 +2748,7 @@
     "issueSize": "₹39.59 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:11.691+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:37.201+05:30",
     "retail": "0.00x",
     "qib": "10.10x",
     "nii": "34.41x",
@@ -2789,7 +2799,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2810,7 +2820,7 @@
     "issueSize": "₹33.80 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:13.620+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:38.771+05:30",
     "retail": "0.00x",
     "qib": "2.00x",
     "nii": "0.41x",
@@ -2856,7 +2866,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -2877,7 +2887,7 @@
     "issueSize": "₹895.00 Cr",
     "gmp": 90,
     "gmpPercent": 15.18,
-    "gmpLastUpdated": "2025-12-12T03:47:14.476+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:39.778+05:30",
     "retail": "15.65x",
     "qib": "213.08x",
     "nii": "116.72x",
@@ -2933,7 +2943,7 @@
         "gmpPercent": 15.18
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 90,
         "gmpPercent": 15.18
       }
@@ -2954,7 +2964,7 @@
     "issueSize": "₹500.00 Cr",
     "gmp": 7,
     "gmpPercent": 5.83,
-    "gmpLastUpdated": "2025-12-12T03:47:15.321+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:40.429+05:30",
     "retail": "16.44x",
     "qib": "50.06x",
     "nii": "107.04x",
@@ -3015,7 +3025,7 @@
         "gmpPercent": 5.83
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 7,
         "gmpPercent": 5.83
       }
@@ -3036,7 +3046,7 @@
     "issueSize": "₹37.50 Cr",
     "gmp": 52,
     "gmpPercent": 34.67,
-    "gmpLastUpdated": "2025-12-12T03:47:16.136+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:41.086+05:30",
     "retail": "0.00x",
     "qib": "228.48x",
     "nii": "624.56x",
@@ -3092,7 +3102,7 @@
         "gmpPercent": 34.67
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 52,
         "gmpPercent": 34.67
       }
@@ -3113,7 +3123,7 @@
     "issueSize": "₹877.50 Cr",
     "gmp": 40,
     "gmpPercent": 6.93,
-    "gmpLastUpdated": "2025-12-12T03:47:17.014+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:41.949+05:30",
     "retail": "0.28x",
     "qib": "0.29x",
     "nii": "0.28x",
@@ -3159,7 +3169,7 @@
         "gmpPercent": 6.93
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 40,
         "gmpPercent": 6.93
       }
@@ -3180,7 +3190,7 @@
     "issueSize": "₹828.00 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:17.618+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:42.986+05:30",
     "retail": "0.30x",
     "qib": "0.82x",
     "nii": "0.11x",
@@ -3236,7 +3246,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -3257,7 +3267,7 @@
     "issueSize": "₹3,600.00 Cr",
     "gmp": 99,
     "gmpPercent": 24.94,
-    "gmpLastUpdated": "2025-12-12T03:47:18.433+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:43.870+05:30",
     "retail": "5.37x",
     "qib": "174.78x",
     "nii": "42.79x",
@@ -3328,7 +3338,7 @@
         "gmpPercent": 24.94
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 99,
         "gmpPercent": 24.94
       }
@@ -3349,7 +3359,7 @@
     "issueSize": "₹70.44 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:20.988+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:46.454+05:30",
     "retail": "0.00x",
     "qib": "1.19x",
     "nii": "3.63x",
@@ -3410,7 +3420,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -3431,7 +3441,7 @@
     "issueSize": "₹2,900.00 Cr",
     "gmp": 3,
     "gmpPercent": 1.38,
-    "gmpLastUpdated": "2025-12-12T03:47:19.223+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:44.781+05:30",
     "retail": "0.65x",
     "qib": "0.06x",
     "nii": "0.12x",
@@ -3482,7 +3492,7 @@
         "gmpPercent": 1.38
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 3,
         "gmpPercent": 1.38
       }
@@ -3503,7 +3513,7 @@
     "issueSize": "₹3,480.00 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:22.008+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:47.331+05:30",
     "retail": "1.14x",
     "qib": "2.86x",
     "nii": "0.51x",
@@ -3559,7 +3569,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -3580,7 +3590,7 @@
     "issueSize": "TBD",
     "gmp": 51,
     "gmpPercent": 25,
-    "gmpLastUpdated": "2025-12-12T03:47:20.122+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:45.829+05:30",
     "retail": "0.00x",
     "qib": "1.48x",
     "nii": "13.58x",
@@ -3631,7 +3641,7 @@
         "gmpPercent": 25
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 51,
         "gmpPercent": 25
       }
@@ -3652,7 +3662,7 @@
     "issueSize": "₹3,899.91 Cr",
     "gmp": 1,
     "gmpPercent": 0.45,
-    "gmpLastUpdated": "2025-12-12T03:47:24.326+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:48.223+05:30",
     "retail": "1.27x",
     "qib": "3.97x",
     "nii": "0.30x",
@@ -3713,7 +3723,7 @@
         "gmpPercent": 0.45
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 1,
         "gmpPercent": 0.45
       }
@@ -3734,7 +3744,7 @@
     "issueSize": "₹27.52 Cr",
     "gmp": 6,
     "gmpPercent": 4.69,
-    "gmpLastUpdated": "2025-12-12T03:47:22.664+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:49.100+05:30",
     "retail": "0.00x",
     "qib": "96.17x",
     "nii": "115.46x",
@@ -3800,7 +3810,7 @@
         "gmpPercent": 4.69
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 6,
         "gmpPercent": 4.69
       }
@@ -3821,7 +3831,7 @@
     "issueSize": "₹17.10 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:23.319+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:50.051+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.43x",
@@ -3877,7 +3887,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -3898,7 +3908,7 @@
     "issueSize": "₹71.68 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:25.005+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:50.933+05:30",
     "retail": "0.00x",
     "qib": "4.33x",
     "nii": "8.38x",
@@ -3964,7 +3974,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -3985,7 +3995,7 @@
     "issueSize": "₹6,632.30 Cr",
     "gmp": 4.75,
     "gmpPercent": 4.75,
-    "gmpLastUpdated": "2025-12-12T03:47:26.614+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:52.663+05:30",
     "retail": "9.43x",
     "qib": "22.02x",
     "nii": "14.20x",
@@ -4046,7 +4056,7 @@
         "gmpPercent": 4.75
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 4.75,
         "gmpPercent": 4.75
       }
@@ -4067,7 +4077,7 @@
     "issueSize": "₹85.00 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:25.648+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:51.910+05:30",
     "retail": "0.00x",
     "qib": "1.64x",
     "nii": "5.06x",
@@ -4183,7 +4193,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -4204,7 +4214,7 @@
     "issueSize": "₹7,278.02 Cr",
     "gmp": 50,
     "gmpPercent": 12.44,
-    "gmpLastUpdated": "2025-12-12T03:47:27.369+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:53.618+05:30",
     "retail": "6.77x",
     "qib": "27.54x",
     "nii": "17.12x",
@@ -4260,7 +4270,7 @@
         "gmpPercent": 12.44
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 50,
         "gmpPercent": 12.44
       }
@@ -4281,7 +4291,7 @@
     "issueSize": "₹455.49 Cr",
     "gmp": 57,
     "gmpPercent": 9.74,
-    "gmpLastUpdated": "2025-12-12T03:47:28.300+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:54.505+05:30",
     "retail": "16.89x",
     "qib": "12.99x",
     "nii": "58.38x",
@@ -4332,7 +4342,7 @@
         "gmpPercent": 9.74
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 57,
         "gmpPercent": 9.74
       }
@@ -4353,7 +4363,7 @@
     "issueSize": "₹1,667.54 Cr",
     "gmp": 93,
     "gmpPercent": 12.74,
-    "gmpLastUpdated": "2025-12-12T03:47:29.189+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:55.682+05:30",
     "retail": "7.06x",
     "qib": "117.63x",
     "nii": "54.42x",
@@ -4409,7 +4419,7 @@
         "gmpPercent": 12.74
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 93,
         "gmpPercent": 12.74
       }
@@ -4430,7 +4440,7 @@
     "issueSize": "₹30.60 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:29.943+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:55.090+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.32x",
@@ -4476,7 +4486,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -4497,7 +4507,7 @@
     "issueSize": "₹54.84 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:30.968+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:56.297+05:30",
     "retail": "0.00x",
     "qib": "1.01x",
     "nii": "1.48x",
@@ -4563,7 +4573,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -4584,7 +4594,7 @@
     "issueSize": "₹28.64 Cr",
     "gmp": 7,
     "gmpPercent": 5.74,
-    "gmpLastUpdated": "2025-12-12T03:47:32.016+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:57.179+05:30",
     "retail": "0.00x",
     "qib": "5.02x",
     "nii": "16.06x",
@@ -4655,7 +4665,7 @@
         "gmpPercent": 5.74
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 7,
         "gmpPercent": 5.74
       }
@@ -4676,7 +4686,7 @@
     "issueSize": "₹451.00 Cr",
     "gmp": 110,
     "gmpPercent": 10.33,
-    "gmpLastUpdated": "2025-12-12T03:47:32.925+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:57.990+05:30",
     "retail": "25.52x",
     "qib": "146.99x",
     "nii": "176.57x",
@@ -4732,7 +4742,7 @@
         "gmpPercent": 10.33
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 110,
         "gmpPercent": 10.33
       }
@@ -4753,7 +4763,7 @@
     "issueSize": "₹63.50 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:42.796+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:07.855+05:30",
     "retail": "0.00x",
     "qib": "1.02x",
     "nii": "0.04x",
@@ -4829,7 +4839,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -4850,7 +4860,7 @@
     "issueSize": "₹41.15 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:34.659+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:59.056+05:30",
     "retail": "0.00x",
     "qib": "0.38x",
     "nii": "3.85x",
@@ -4906,7 +4916,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -4927,7 +4937,7 @@
     "issueSize": "₹2,517.50 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:33.845+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:59.806+05:30",
     "retail": "0.36x",
     "qib": "2.95x",
     "nii": "0.24x",
@@ -4983,7 +4993,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5004,7 +5014,7 @@
     "issueSize": "₹10.56 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:35.678+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:00.637+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "1.04x",
@@ -5045,7 +5055,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5066,7 +5076,7 @@
     "issueSize": "₹400.00 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:40.003+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:05.266+05:30",
     "retail": "0.00x",
     "qib": "1.06x",
     "nii": "6.70x",
@@ -5122,7 +5132,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5143,7 +5153,7 @@
     "issueSize": "₹1,377.50 Cr",
     "gmp": 95,
     "gmpPercent": 19.59,
-    "gmpLastUpdated": "2025-12-12T03:47:36.730+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:01.720+05:30",
     "retail": "0.00x",
     "qib": "8.70x",
     "nii": "48.59x",
@@ -5214,7 +5224,7 @@
         "gmpPercent": 19.59
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 95,
         "gmpPercent": 19.59
       }
@@ -5235,7 +5245,7 @@
     "issueSize": "₹1,326.13 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:37.606+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:02.739+05:30",
     "retail": "1.22x",
     "qib": "0.33x",
     "nii": "1.73x",
@@ -5291,7 +5301,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5312,7 +5322,7 @@
     "issueSize": "₹11,607.01 Cr",
     "gmp": 337,
     "gmpPercent": 29.56,
-    "gmpLastUpdated": "2025-12-12T03:47:39.188+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:04.557+05:30",
     "retail": "3.37x",
     "qib": "140.98x",
     "nii": "22.10x",
@@ -5368,7 +5378,7 @@
         "gmpPercent": 29.56
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 337,
         "gmpPercent": 29.56
       }
@@ -5389,7 +5399,7 @@
     "issueSize": "₹52.91 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:38.256+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:03.678+05:30",
     "retail": "0.00x",
     "qib": "1.13x",
     "nii": "0.55x",
@@ -5440,7 +5450,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5461,7 +5471,7 @@
     "issueSize": "₹15,511.87 Cr",
     "gmp": 4.5,
     "gmpPercent": 1.38,
-    "gmpLastUpdated": "2025-12-12T03:47:40.938+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:05.980+05:30",
     "retail": "1.04x",
     "qib": "3.05x",
     "nii": "1.85x",
@@ -5537,7 +5547,7 @@
         "gmpPercent": 1.38
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 4.5,
         "gmpPercent": 1.38
       }
@@ -5558,7 +5568,7 @@
     "issueSize": "₹77.91 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:18.920+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:44.176+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -5604,7 +5614,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5625,7 +5635,7 @@
     "issueSize": "₹3,000.00 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:42.040+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:06.919+05:30",
     "retail": "0.57x",
     "qib": "1.77x",
     "nii": "0.21x",
@@ -5671,7 +5681,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5692,7 +5702,7 @@
     "issueSize": "₹59.65 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:01.575+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:25.867+05:30",
     "retail": "0.00x",
     "qib": "1.00x",
     "nii": "0.78x",
@@ -5783,7 +5793,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5804,7 +5814,7 @@
     "issueSize": "₹21.90 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:44.189+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:09.091+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "3.89x",
@@ -5885,7 +5895,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -5906,7 +5916,7 @@
     "issueSize": "₹24.42 Cr",
     "gmp": 25,
     "gmpPercent": 16.13,
-    "gmpLastUpdated": "2025-12-12T03:47:47.484+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:11.964+05:30",
     "retail": "0.00x",
     "qib": "3.51x",
     "nii": "2.14x",
@@ -6017,7 +6027,7 @@
         "gmpPercent": 16.13
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 25,
         "gmpPercent": 16.13
       }
@@ -6038,7 +6048,7 @@
     "issueSize": "₹192.86 Cr",
     "gmp": 9,
     "gmpPercent": 9,
-    "gmpLastUpdated": "2025-12-12T03:47:51.113+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:18.396+05:30",
     "retail": "1.12x",
     "qib": "3.50x",
     "nii": "1.07x",
@@ -6094,7 +6104,7 @@
         "gmpPercent": 9
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 9,
         "gmpPercent": 9
       }
@@ -6115,7 +6125,7 @@
     "issueSize": "₹122.31 Cr",
     "gmp": 7,
     "gmpPercent": 5.19,
-    "gmpLastUpdated": "2025-12-12T03:47:46.834+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:13.025+05:30",
     "retail": "1.33x",
     "qib": "3.95x",
     "nii": "5.07x",
@@ -6171,7 +6181,7 @@
         "gmpPercent": 5.19
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 7,
         "gmpPercent": 5.19
       }
@@ -6192,7 +6202,7 @@
     "issueSize": "₹16.84 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:48.395+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:13.891+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.01x",
@@ -6248,7 +6258,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -6269,7 +6279,7 @@
     "issueSize": "₹28.09 Cr",
     "gmp": 1.5,
     "gmpPercent": 2.78,
-    "gmpLastUpdated": "2025-12-12T03:47:49.408+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:14.966+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.15x",
@@ -6325,7 +6335,7 @@
         "gmpPercent": 2.78
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 1.5,
         "gmpPercent": 2.78
       }
@@ -6346,7 +6356,7 @@
     "issueSize": "₹48.72 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:52.985+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:17.453+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.92x",
@@ -6397,7 +6407,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -6418,7 +6428,7 @@
     "issueSize": "₹78.34 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:52.023+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:16.738+05:30",
     "retail": "0.00x",
     "qib": "1.27x",
     "nii": "0.10x",
@@ -6469,7 +6479,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -6490,7 +6500,7 @@
     "issueSize": "₹34.02 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:45.798+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:11.026+05:30",
     "retail": "0.00x",
     "qib": "0.02x",
     "nii": "0.17x",
@@ -6531,7 +6541,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -6552,7 +6562,7 @@
     "issueSize": "₹31.07 Cr",
     "gmp": 4,
     "gmpPercent": 19.05,
-    "gmpLastUpdated": "2025-12-12T03:47:50.067+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:15.953+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.23x",
@@ -6598,7 +6608,7 @@
         "gmpPercent": 19.05
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 4,
         "gmpPercent": 19.05
       }
@@ -6619,7 +6629,7 @@
     "issueSize": "₹73.92 Cr",
     "gmp": 5,
     "gmpPercent": 5.21,
-    "gmpLastUpdated": "2025-12-12T03:47:45.063+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:10.133+05:30",
     "retail": "0.00x",
     "qib": "0.36x",
     "nii": "0.25x",
@@ -6660,7 +6670,7 @@
         "gmpPercent": 5.21
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 5,
         "gmpPercent": 5.21
       }
@@ -6681,7 +6691,7 @@
     "issueSize": "₹230.35 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:59.783+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:24.132+05:30",
     "retail": "2.09x",
     "qib": "2.02x",
     "nii": "1.97x",
@@ -6732,7 +6742,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -6753,7 +6763,7 @@
     "issueSize": "₹307.00 Cr",
     "gmp": 5,
     "gmpPercent": 3.88,
-    "gmpLastUpdated": "2025-12-12T03:47:56.887+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:21.208+05:30",
     "retail": "1.47x",
     "qib": "1.84x",
     "nii": "3.08x",
@@ -6809,7 +6819,7 @@
         "gmpPercent": 3.88
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 5,
         "gmpPercent": 3.88
       }
@@ -6830,7 +6840,7 @@
     "issueSize": "₹10.71 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:58.733+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:23.311+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "5.99x",
@@ -6881,7 +6891,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -6902,7 +6912,7 @@
     "issueSize": "₹19.25 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:54.046+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:19.105+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "1.86x",
@@ -6953,7 +6963,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -6974,7 +6984,7 @@
     "issueSize": "₹22.35 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:55.005+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:19.765+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.41x",
@@ -7025,7 +7035,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -7046,7 +7056,7 @@
     "issueSize": "₹75.47 Cr",
     "gmp": 7,
     "gmpPercent": 6.31,
-    "gmpLastUpdated": "2025-12-12T03:47:57.701+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:22.250+05:30",
     "retail": "0.00x",
     "qib": "20.98x",
     "nii": "22.41x",
@@ -7097,7 +7107,7 @@
         "gmpPercent": 6.31
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 7,
         "gmpPercent": 6.31
       }
@@ -7118,7 +7128,7 @@
     "issueSize": "₹10.08 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:55.897+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:20.458+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.96x",
@@ -7164,7 +7174,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -7185,7 +7195,7 @@
     "issueSize": "₹77.00 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:06.353+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:31.023+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.86x",
@@ -7256,7 +7266,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -7277,7 +7287,7 @@
     "issueSize": "₹819.15 Cr",
     "gmp": 18,
     "gmpPercent": 8.22,
-    "gmpLastUpdated": "2025-12-12T03:48:04.241+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:28.377+05:30",
     "retail": "0.79x",
     "qib": "0.24x",
     "nii": "1.26x",
@@ -7338,7 +7348,7 @@
         "gmpPercent": 8.22
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 18,
         "gmpPercent": 8.22
       }
@@ -7359,7 +7369,7 @@
     "issueSize": "₹30.00 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:04.863+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:29.267+05:30",
     "retail": "0.00x",
     "qib": "2.00x",
     "nii": "1.03x",
@@ -7415,7 +7425,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -7436,7 +7446,7 @@
     "issueSize": "₹23.52 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:03.279+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:27.658+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.03x",
@@ -7487,7 +7497,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -7508,7 +7518,7 @@
     "issueSize": "₹27.83 Cr",
     "gmp": 3,
     "gmpPercent": 5.36,
-    "gmpLastUpdated": "2025-12-12T03:48:00.531+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:25.050+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.74x",
@@ -7559,7 +7569,7 @@
         "gmpPercent": 5.36
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 3,
         "gmpPercent": 5.36
       }
@@ -7580,7 +7590,7 @@
     "issueSize": "₹23.52 Cr",
     "gmp": 16,
     "gmpPercent": 16.16,
-    "gmpLastUpdated": "2025-12-12T03:48:02.481+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:26.624+05:30",
     "retail": "0.00x",
     "qib": "1.07x",
     "nii": "18.05x",
@@ -7631,7 +7641,7 @@
         "gmpPercent": 16.16
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 16,
         "gmpPercent": 16.16
       }
@@ -7652,7 +7662,7 @@
     "issueSize": "₹25.74 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:05.695+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:30.235+05:30",
     "retail": "0.00x",
     "qib": "16.80x",
     "nii": "0.18x",
@@ -7698,7 +7708,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -7719,7 +7729,7 @@
     "issueSize": "₹116.11 Cr",
     "gmp": 17.5,
     "gmpPercent": 14.46,
-    "gmpLastUpdated": "2025-12-12T03:48:11.208+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:35.824+05:30",
     "retail": "47.04x",
     "qib": "35.70x",
     "nii": "146.39x",
@@ -7805,7 +7815,7 @@
         "gmpPercent": 14.46
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 17.5,
         "gmpPercent": 14.46
       }
@@ -7826,7 +7836,7 @@
     "issueSize": "₹27.24 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:07.970+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:33.495+05:30",
     "retail": "0.00x",
     "qib": "5.41x",
     "nii": "2.75x",
@@ -7902,7 +7912,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -7923,7 +7933,7 @@
     "issueSize": "₹42.86 Cr",
     "gmp": 14,
     "gmpPercent": 12.17,
-    "gmpLastUpdated": "2025-12-12T03:48:09.668+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:35.054+05:30",
     "retail": "0.00x",
     "qib": "38.20x",
     "nii": "82.30x",
@@ -7984,7 +7994,7 @@
         "gmpPercent": 12.17
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 14,
         "gmpPercent": 12.17
       }
@@ -8005,7 +8015,7 @@
     "issueSize": "₹839.28 Cr",
     "gmp": 110,
     "gmpPercent": 22.18,
-    "gmpLastUpdated": "2025-12-12T03:48:10.552+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:32.598+05:30",
     "retail": "11.50x",
     "qib": "165.16x",
     "nii": "103.04x",
@@ -8066,7 +8076,7 @@
         "gmpPercent": 22.18
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 110,
         "gmpPercent": 22.18
       }
@@ -8087,7 +8097,7 @@
     "issueSize": "₹23.81 Cr",
     "gmp": 6,
     "gmpPercent": 7.5,
-    "gmpLastUpdated": "2025-12-12T03:48:07.167+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:31.853+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "7.87x",
@@ -8138,7 +8148,7 @@
         "gmpPercent": 7.5
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 6,
         "gmpPercent": 7.5
       }
@@ -8159,7 +8169,7 @@
     "issueSize": "₹49.26 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:08.744+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:34.414+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "38.03x",
@@ -8205,7 +8215,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -8226,7 +8236,7 @@
     "issueSize": "₹63.00 Cr",
     "gmp": 8,
     "gmpPercent": 6.3,
-    "gmpLastUpdated": "2025-12-12T03:48:15.482+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:40.223+05:30",
     "retail": "0.00x",
     "qib": "1.96\tx",
     "nii": "1.89x",
@@ -8282,7 +8292,7 @@
         "gmpPercent": 6.3
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 8,
         "gmpPercent": 6.3
       }
@@ -8303,7 +8313,7 @@
     "issueSize": "₹23.50 Cr",
     "gmp": 3,
     "gmpPercent": 4.76,
-    "gmpLastUpdated": "2025-12-12T03:48:11.972+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:36.802+05:30",
     "retail": "0.00x",
     "qib": "0.34x",
     "nii": "0.48x",
@@ -8354,7 +8364,7 @@
         "gmpPercent": 4.76
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 3,
         "gmpPercent": 4.76
       }
@@ -8375,7 +8385,7 @@
     "issueSize": "₹115.60 Cr",
     "gmp": 20,
     "gmpPercent": 10.26,
-    "gmpLastUpdated": "2025-12-12T03:48:18.302+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:42.652+05:30",
     "retail": "0.00x",
     "qib": "1.18x",
     "nii": "0.26x",
@@ -8431,7 +8441,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 20,
         "gmpPercent": 10.26
       }
@@ -8452,7 +8462,7 @@
     "issueSize": "₹18.87 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:30.127+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:54.483+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -8493,7 +8503,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -8514,7 +8524,7 @@
     "issueSize": "₹1,250.00 Cr",
     "gmp": 17,
     "gmpPercent": 7.33,
-    "gmpLastUpdated": "2025-12-12T03:48:12.987+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:37.669+05:30",
     "retail": "1.35x",
     "qib": "1.70x",
     "nii": "0.52x",
@@ -8560,7 +8570,7 @@
         "gmpPercent": 7.33
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 17,
         "gmpPercent": 7.33
       }
@@ -8581,7 +8591,7 @@
     "issueSize": "₹504.00 Cr",
     "gmp": 15,
     "gmpPercent": 7.35,
-    "gmpLastUpdated": "2025-12-12T03:48:13.874+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:38.563+05:30",
     "retail": "0.74x",
     "qib": "0.46x",
     "nii": "0.48x",
@@ -8647,7 +8657,7 @@
         "gmpPercent": 7.35
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 15,
         "gmpPercent": 7.35
       }
@@ -8668,7 +8678,7 @@
     "issueSize": "₹231.66 Cr",
     "gmp": 8,
     "gmpPercent": 8.08,
-    "gmpLastUpdated": "2025-12-12T03:48:16.418+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:40.922+05:30",
     "retail": "0.27x",
     "qib": "1.08x",
     "nii": "0.05x",
@@ -8714,7 +8724,7 @@
         "gmpPercent": 8.08
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 8,
         "gmpPercent": 8.08
       }
@@ -8735,7 +8745,7 @@
     "issueSize": "₹28.80 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:17.451+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:41.847+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.19\tx",
@@ -8781,7 +8791,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -8802,7 +8812,7 @@
     "issueSize": "₹13.02 Cr",
     "gmp": 7,
     "gmpPercent": 10,
-    "gmpLastUpdated": "2025-12-12T03:48:24.752+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:49.767+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -8853,7 +8863,7 @@
         "gmpPercent": 10
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 7,
         "gmpPercent": 10
       }
@@ -8874,7 +8884,7 @@
     "issueSize": "₹45.04 Cr",
     "gmp": 10,
     "gmpPercent": 11.76,
-    "gmpLastUpdated": "2025-12-12T03:48:23.789+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:48.798+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -8925,7 +8935,7 @@
         "gmpPercent": 11.76
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 10,
         "gmpPercent": 11.76
       }
@@ -8946,7 +8956,7 @@
     "issueSize": "₹127.96 Cr",
     "gmp": 45,
     "gmpPercent": 23.56,
-    "gmpLastUpdated": "2025-12-12T03:48:19.927+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:44.824+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -8992,7 +9002,7 @@
         "gmpPercent": 23.56
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 45,
         "gmpPercent": 23.56
       }
@@ -9013,7 +9023,7 @@
     "issueSize": "₹76.42 Cr",
     "gmp": 15,
     "gmpPercent": 10.64,
-    "gmpLastUpdated": "2025-12-12T03:48:25.672+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:50.375+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -9059,7 +9069,7 @@
         "gmpPercent": 10.64
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 15,
         "gmpPercent": 10.64
       }
@@ -9080,7 +9090,7 @@
     "issueSize": "₹490.00 Cr",
     "gmp": 65,
     "gmpPercent": 18.52,
-    "gmpLastUpdated": "2025-12-12T03:48:20.741+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:45.807+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -9121,7 +9131,7 @@
         "gmpPercent": 18.52
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 65,
         "gmpPercent": 18.52
       }
@@ -9142,7 +9152,7 @@
     "issueSize": "₹450.00 Cr",
     "gmp": 123,
     "gmpPercent": 13.82,
-    "gmpLastUpdated": "2025-12-12T03:48:26.421+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:51.021+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -9193,7 +9203,7 @@
         "gmpPercent": 13.82
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 123,
         "gmpPercent": 13.82
       }
@@ -9214,7 +9224,7 @@
     "issueSize": "₹813.07 Cr",
     "gmp": 75,
     "gmpPercent": 17.73,
-    "gmpLastUpdated": "2025-12-12T03:48:21.413+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:46.771+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -9270,7 +9280,7 @@
         "gmpPercent": 17.73
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 75,
         "gmpPercent": 17.73
       }
@@ -9291,7 +9301,7 @@
     "issueSize": "TBD",
     "gmp": 10,
     "gmpPercent": 9.62,
-    "gmpLastUpdated": "2025-12-12T03:48:23.101+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:43.469+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -9342,7 +9352,7 @@
         "gmpPercent": 9.62
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 10,
         "gmpPercent": 9.62
       }
@@ -9363,7 +9373,7 @@
     "issueSize": "₹745.00 Cr",
     "gmp": 35,
     "gmpPercent": 8.45,
-    "gmpLastUpdated": "2025-12-12T03:48:22.107+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:47.807+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -9419,7 +9429,7 @@
         "gmpPercent": 8.45
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 35,
         "gmpPercent": 8.45
       }
@@ -9440,7 +9450,7 @@
     "issueSize": "₹687.34 Cr",
     "gmp": 120,
     "gmpPercent": 15.92,
-    "gmpLastUpdated": "2025-12-12T03:48:29.224+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:53.556+05:30",
     "retail": "0.29x",
     "qib": "0.00x",
     "nii": "0.20x",
@@ -9486,7 +9496,7 @@
         "gmpPercent": 15.92
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 120,
         "gmpPercent": 15.92
       }
@@ -9507,7 +9517,7 @@
     "issueSize": "₹408.80 Cr",
     "gmp": 10,
     "gmpPercent": 3.11,
-    "gmpLastUpdated": "2025-12-12T03:48:28.282+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:52.683+05:30",
     "retail": "0.09x",
     "qib": "0.00x",
     "nii": "0.02x",
@@ -9563,7 +9573,7 @@
         "gmpPercent": 3.11
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 10,
         "gmpPercent": 3.11
       }
@@ -9584,7 +9594,7 @@
     "issueSize": "₹40.01 Cr",
     "gmp": 6,
     "gmpPercent": 7.23,
-    "gmpLastUpdated": "2025-12-12T03:48:27.404+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:51.988+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.41x",
@@ -9630,7 +9640,7 @@
         "gmpPercent": 7.23
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 6,
         "gmpPercent": 7.23
       }
@@ -9651,7 +9661,7 @@
     "issueSize": "₹900.00 Cr",
     "gmp": 17,
     "gmpPercent": 3.23,
-    "gmpLastUpdated": "2025-12-12T03:48:31.804+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:56.212+05:30",
     "retail": "1.36x",
     "qib": "0.01x",
     "nii": "1.05x",
@@ -9702,7 +9712,7 @@
         "gmpPercent": 3.23
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 17,
         "gmpPercent": 3.23
       }
@@ -9723,7 +9733,7 @@
     "issueSize": "₹464.26 Cr",
     "gmp": 31,
     "gmpPercent": 20.26,
-    "gmpLastUpdated": "2025-12-12T03:48:32.462+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:57.028+05:30",
     "retail": "4.99x",
     "qib": "2.41x",
     "nii": "5.79x",
@@ -9779,7 +9789,7 @@
         "gmpPercent": 20.26
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 31,
         "gmpPercent": 20.26
       }
@@ -9800,7 +9810,7 @@
     "issueSize": "₹69.85 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:31.132+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:55.510+05:30",
     "retail": "0.00x",
     "qib": "6.38x",
     "nii": "5.43x",
@@ -9851,7 +9861,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -9872,7 +9882,7 @@
     "issueSize": "₹95.99 Cr",
     "gmp": 45,
     "gmpPercent": 29.61,
-    "gmpLastUpdated": "2025-12-12T03:48:33.405+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:58.026+05:30",
     "retail": "0.00x",
     "qib": "44.80x",
     "nii": "76.00x",
@@ -9938,7 +9948,7 @@
         "gmpPercent": 29.61
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 45,
         "gmpPercent": 29.61
       }
@@ -9959,7 +9969,7 @@
     "issueSize": "₹560.29 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:34.350+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:58.882+05:30",
     "retail": "1.13x",
     "qib": "1.41x",
     "nii": "0.92x",
@@ -10010,7 +10020,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -10031,7 +10041,7 @@
     "issueSize": "₹30.53 Cr",
     "gmp": 21,
     "gmpPercent": 17.5,
-    "gmpLastUpdated": "2025-12-12T03:48:35.123+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:59.733+05:30",
     "retail": "0.00x",
     "qib": "0.90x",
     "nii": "14.75x",
@@ -10082,7 +10092,7 @@
         "gmpPercent": 17.5
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 21,
         "gmpPercent": 17.5
       }
@@ -10103,7 +10113,7 @@
     "issueSize": "₹148.50 Cr",
     "gmp": 16,
     "gmpPercent": 16.16,
-    "gmpLastUpdated": "2025-12-12T03:48:36.125+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:00.542+05:30",
     "retail": "18.99x",
     "qib": "7.47x",
     "nii": "37.26x",
@@ -10154,7 +10164,7 @@
         "gmpPercent": 16.16
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 16,
         "gmpPercent": 16.16
       }
@@ -10175,7 +10185,7 @@
     "issueSize": "₹451.31 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:36.890+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:01.578+05:30",
     "retail": "1.31x",
     "qib": "1.10x",
     "nii": "2.02x",
@@ -10236,7 +10246,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -10257,7 +10267,7 @@
     "issueSize": "₹38.99 Cr",
     "gmp": 180,
     "gmpPercent": 93.26,
-    "gmpLastUpdated": "2025-12-12T03:48:37.718+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:02.456+05:30",
     "retail": "0.00x",
     "qib": "277.16x",
     "nii": "1,247.77x",
@@ -10313,7 +10323,7 @@
         "gmpPercent": 93.26
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 180,
         "gmpPercent": 93.26
       }
@@ -10334,7 +10344,7 @@
     "issueSize": "₹39.37 Cr",
     "gmp": 20,
     "gmpPercent": 25.64,
-    "gmpLastUpdated": "2025-12-12T03:48:38.486+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:03.351+05:30",
     "retail": "0.00x",
     "qib": "43.43x",
     "nii": "252.30x",
@@ -10370,7 +10380,7 @@
         "gmpPercent": 25.64
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 20,
         "gmpPercent": 25.64
       }
@@ -10391,7 +10401,7 @@
     "issueSize": "₹91.10 Cr",
     "gmp": 175,
     "gmpPercent": 125,
-    "gmpLastUpdated": "2025-12-12T03:48:39.378+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:04.308+05:30",
     "retail": "0.00x",
     "qib": "214.64x",
     "nii": "348.42x",
@@ -10462,7 +10472,7 @@
         "gmpPercent": 125
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 175,
         "gmpPercent": 125
       }
@@ -10483,7 +10493,7 @@
     "issueSize": "₹1,900.00 Cr",
     "gmp": 48,
     "gmpPercent": 46.6,
-    "gmpLastUpdated": "2025-12-12T03:48:41.868+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:08.051+05:30",
     "retail": "41.49x",
     "qib": "147.35x",
     "nii": "77.82x",
@@ -10549,7 +10559,7 @@
         "gmpPercent": 46.6
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 48,
         "gmpPercent": 46.6
       }
@@ -10570,7 +10580,7 @@
     "issueSize": "₹400.95 Cr",
     "gmp": 33,
     "gmpPercent": 20,
-    "gmpLastUpdated": "2025-12-12T03:48:40.075+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:06.217+05:30",
     "retail": "27.05x",
     "qib": "101.41x",
     "nii": "82.55x",
@@ -10636,7 +10646,7 @@
         "gmpPercent": 20
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 33,
         "gmpPercent": 20
       }
@@ -10657,7 +10667,7 @@
     "issueSize": "₹18.45 Cr",
     "gmp": 12,
     "gmpPercent": 15.38,
-    "gmpLastUpdated": "2025-12-12T03:48:43.475+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:05.248+05:30",
     "retail": "0.00x",
     "qib": "16.79x",
     "nii": "110.24x",
@@ -10718,7 +10728,7 @@
         "gmpPercent": 15.38
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 12,
         "gmpPercent": 15.38
       }
@@ -10739,7 +10749,7 @@
     "issueSize": "₹143.35 Cr",
     "gmp": 12,
     "gmpPercent": 19.67,
-    "gmpLastUpdated": "2025-12-12T03:48:41.059+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:07.173+05:30",
     "retail": "164.36x",
     "qib": "20.30x",
     "nii": "87.95x",
@@ -10800,7 +10810,7 @@
         "gmpPercent": 19.67
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 12,
         "gmpPercent": 19.67
       }
@@ -10821,7 +10831,7 @@
     "issueSize": "₹22.31 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:42.593+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:08.773+05:30",
     "retail": "0.00x",
     "qib": "1.00x",
     "nii": "1.48x",
@@ -10857,7 +10867,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -10878,7 +10888,7 @@
     "issueSize": "₹59.30 Cr",
     "gmp": 21,
     "gmpPercent": 13.21,
-    "gmpLastUpdated": "2025-12-12T03:48:46.090+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:11.292+05:30",
     "retail": "0.00x",
     "qib": "121.61x",
     "nii": "85.99x",
@@ -10959,7 +10969,7 @@
         "gmpPercent": 13.21
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 21,
         "gmpPercent": 13.21
       }
@@ -10980,7 +10990,7 @@
     "issueSize": "₹13.48 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:47.725+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:12.841+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.01x",
@@ -11021,7 +11031,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -11042,7 +11052,7 @@
     "issueSize": "₹42.53 Cr",
     "gmp": 5,
     "gmpPercent": 2.92,
-    "gmpLastUpdated": "2025-12-12T03:48:44.237+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:09.593+05:30",
     "retail": "0.00x",
     "qib": "15.89x",
     "nii": "17.37x",
@@ -11118,7 +11128,7 @@
         "gmpPercent": 2.92
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 5,
         "gmpPercent": 2.92
       }
@@ -11139,7 +11149,7 @@
     "issueSize": "₹56.10 Cr",
     "gmp": 1,
     "gmpPercent": 1.18,
-    "gmpLastUpdated": "2025-12-12T03:48:45.224+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:10.551+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "1.56x",
@@ -11200,7 +11210,7 @@
         "gmpPercent": 1.18
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 1,
         "gmpPercent": 1.18
       }
@@ -11221,7 +11231,7 @@
     "issueSize": "₹8.87 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:47.086+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:11.946+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -11282,7 +11292,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -11303,7 +11313,7 @@
     "issueSize": "₹15.57 Cr",
     "gmp": 25,
     "gmpPercent": 45.45,
-    "gmpLastUpdated": "2025-12-12T03:48:50.272+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:15.300+05:30",
     "retail": "0.00x",
     "qib": "6.54x",
     "nii": "405.07x",
@@ -11379,7 +11389,7 @@
         "gmpPercent": 45.45
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 25,
         "gmpPercent": 45.45
       }
@@ -11400,7 +11410,7 @@
     "issueSize": "₹58.80 Cr",
     "gmp": 22,
     "gmpPercent": 11.22,
-    "gmpLastUpdated": "2025-12-12T03:48:48.755+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:13.598+05:30",
     "retail": "0.00x",
     "qib": "0.90x",
     "nii": "1.06x",
@@ -11451,7 +11461,7 @@
         "gmpPercent": 11.22
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 22,
         "gmpPercent": 11.22
       }
@@ -11472,7 +11482,7 @@
     "issueSize": "₹25.10 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:49.633+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:14.473+05:30",
     "retail": "0.00x",
     "qib": "0.50x",
     "nii": "1.87x",
@@ -11543,7 +11553,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -11564,7 +11574,7 @@
     "issueSize": "₹51.82 Cr",
     "gmp": 7,
     "gmpPercent": 8.33,
-    "gmpLastUpdated": "2025-12-12T03:48:52.168+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:16.196+05:30",
     "retail": "0.00x",
     "qib": "49.27x",
     "nii": "118.82x",
@@ -11630,7 +11640,7 @@
         "gmpPercent": 8.33
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 7,
         "gmpPercent": 8.33
       }
@@ -11651,7 +11661,7 @@
     "issueSize": "₹126.00 Cr",
     "gmp": 9,
     "gmpPercent": 7.14,
-    "gmpLastUpdated": "2025-12-12T03:48:52.810+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:19.216+05:30",
     "retail": "54.96x",
     "qib": "35.86x",
     "nii": "209.40x",
@@ -11732,7 +11742,7 @@
         "gmpPercent": 7.14
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 9,
         "gmpPercent": 7.14
       }
@@ -11753,7 +11763,7 @@
     "issueSize": "₹100.15 Cr",
     "gmp": 48,
     "gmpPercent": 18.25,
-    "gmpLastUpdated": "2025-12-12T03:48:51.156+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:17.589+05:30",
     "retail": "0.00x",
     "qib": "124.20x",
     "nii": "224.80x",
@@ -11809,7 +11819,7 @@
         "gmpPercent": 18.25
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 48,
         "gmpPercent": 18.25
       }
@@ -11830,7 +11840,7 @@
     "issueSize": "₹19.49 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:48:53.534+05:30",
+    "gmpLastUpdated": "2025-12-12T06:51:18.566+05:30",
     "retail": "0.00x",
     "qib": "1.00x",
     "nii": "1.25x",
@@ -11906,7 +11916,7 @@
         "gmpPercent": 0
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
@@ -11927,7 +11937,7 @@
     "listingDate": "2025-12-12",
     "gmp": 23,
     "gmpPercent": 11.86,
-    "gmpLastUpdated": "2025-12-12T03:46:55.498+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:20.496+05:30",
     "subscribed": "2.94x",
     "retail": "0.00x",
     "qib": "4.91x",
@@ -11993,7 +12003,7 @@
         "gmpPercent": 11.86
       },
       {
-        "date": "2025-12-11T00:00:00.000Z",
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 23,
         "gmpPercent": 11.86
       }
@@ -12015,7 +12025,7 @@
     "issueSize": "₹920.00 Cr",
     "gmp": 10.5,
     "gmpPercent": 6.48,
-    "gmpLastUpdated": "2025-12-12T03:46:49.524+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:14.443+05:30",
     "retail": "0.00x",
     "qib": "0.34x",
     "nii": "1.46x",
@@ -12068,6 +12078,11 @@
         "date": "2025-12-11",
         "gmp": 10.5,
         "gmpPercent": 6.48
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
+        "gmp": 10.5,
+        "gmpPercent": 6.48
       }
     ]
   },
@@ -12087,7 +12102,7 @@
     "issueSize": "₹56.35 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:47:43.295+05:30",
+    "gmpLastUpdated": "2025-12-12T06:50:08.097+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.27x",
@@ -12110,6 +12125,11 @@
         "date": "2025-12-11",
         "gmp": 0,
         "gmpPercent": 0
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
+        "gmp": 0,
+        "gmpPercent": 0
       }
     ]
   },
@@ -12129,7 +12149,7 @@
     "issueSize": "₹21.45 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:46:48.656+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:13.661+05:30",
     "retail": "0.00x",
     "qib": "0.99x",
     "nii": "0.33x",
@@ -12172,6 +12192,11 @@
         "date": "2025-12-11",
         "gmp": 0,
         "gmpPercent": 0
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
+        "gmp": 0,
+        "gmpPercent": 0
       }
     ]
   },
@@ -12191,7 +12216,7 @@
     "issueSize": "₹50.92 Cr",
     "gmp": 15.5,
     "gmpPercent": 16.15,
-    "gmpLastUpdated": "2025-12-12T03:46:46.909+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:11.199+05:30",
     "retail": "0.00x",
     "qib": "1.08x",
     "nii": "0.17x",
@@ -12224,6 +12249,11 @@
         "date": "2025-12-11",
         "gmp": 15.5,
         "gmpPercent": 16.15
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
+        "gmp": 15.5,
+        "gmpPercent": 16.15
       }
     ]
   },
@@ -12239,11 +12269,11 @@
     "lotSize": 1000,
     "priceRange": "₹135 - ₹142",
     "subscribed": "0.00x",
-    "status": "Upcoming",
+    "status": "Current",
     "issueSize": "₹71.00 Cr",
     "gmp": 7,
     "gmpPercent": 4.93,
-    "gmpLastUpdated": "2025-12-12T03:46:44.295+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:08.629+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -12281,6 +12311,11 @@
         "date": "2025-12-11",
         "gmp": 7,
         "gmpPercent": 4.93
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
+        "gmp": 7,
+        "gmpPercent": 4.93
       }
     ]
   },
@@ -12296,11 +12331,11 @@
     "lotSize": 1600,
     "priceRange": "₹83 - ₹85",
     "subscribed": "0.00x",
-    "status": "Upcoming",
+    "status": "Current",
     "issueSize": "₹43.73 Cr",
     "gmp": 9,
     "gmpPercent": 10.23,
-    "gmpLastUpdated": "2025-12-12T03:46:43.641+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:07.640+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -12316,6 +12351,11 @@
       },
       {
         "date": "2025-12-11",
+        "gmp": 9,
+        "gmpPercent": 10.23
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 9,
         "gmpPercent": 10.23
       }
@@ -12363,7 +12403,7 @@
     "issueSize": "₹74.45 Cr",
     "gmp": 9,
     "gmpPercent": 7.63,
-    "gmpLastUpdated": "2025-12-12T03:46:47.865+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:11.935+05:30",
     "retail": "0.00x",
     "qib": "3.54x",
     "nii": "0.18x",
@@ -12411,6 +12451,11 @@
         "date": "2025-12-11",
         "gmp": 9,
         "gmpPercent": 7.63
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
+        "gmp": 9,
+        "gmpPercent": 7.63
       }
     ]
   },
@@ -12426,11 +12471,11 @@
     "lotSize": 2000,
     "priceRange": "₹30 - ₹30",
     "subscribed": "0.00x",
-    "status": "Upcoming",
+    "status": "Current",
     "issueSize": "₹12.28 Cr",
     "gmp": 0,
     "gmpPercent": 0,
-    "gmpLastUpdated": "2025-12-12T03:46:45.965+05:30",
+    "gmpLastUpdated": "2025-12-12T06:49:10.408+05:30",
     "retail": "0.00x",
     "qib": "0.00x",
     "nii": "0.00x",
@@ -12446,6 +12491,11 @@
       },
       {
         "date": "2025-12-11",
+        "gmp": 0,
+        "gmpPercent": 0
+      },
+      {
+        "date": "2025-12-12T00:00:00.000Z",
         "gmp": 0,
         "gmpPercent": 0
       }
