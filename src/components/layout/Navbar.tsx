@@ -23,9 +23,10 @@ export function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <span className="text-xs text-muted-foreground hidden md:inline-flex items-center gap-2" suppressHydrationWarning>
+                    <span className="text-xs text-muted-foreground inline-flex items-center gap-1.5" suppressHydrationWarning>
                         <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                        Updated: <span className="font-semibold text-green-600 dark:text-green-400" suppressHydrationWarning>{formatLastUpdate()}</span>
+                        <span className="hidden sm:inline">Updated: </span>
+                        <span className="font-semibold text-green-600 dark:text-green-400" suppressHydrationWarning>{formatLastUpdate()}</span>
                     </span>
                 </div>
 
