@@ -11,6 +11,26 @@ import {
     LogoOption8,
     LogoOption9,
     LogoOption10,
+    LogoOption11,
+    LogoOption12,
+    LogoOption13,
+    LogoOption14,
+    LogoOption15,
+    LogoOption16,
+    LogoOption17,
+    LogoOption18,
+    LogoOption19,
+    LogoOption20,
+    LogoOption21,
+    LogoOption22,
+    LogoOption23,
+    LogoOption24,
+    LogoOption25,
+    LogoOption26,
+    LogoOption27,
+    LogoOption28,
+    LogoOption29,
+    LogoOption30,
 } from "@/components/ui/logo";
 
 const logoOptions = [
@@ -24,6 +44,26 @@ const logoOptions = [
     { component: LogoOption8, name: "Option 8", description: "Neon Circuit Board - Tech style with data flow animation" },
     { component: LogoOption9, name: "Option 9", description: "Orbiting Coins - Currency coins orbiting ₹ symbol" },
     { component: LogoOption10, name: "Option 10", description: "Stacked Bars with Wave - Growing bars with wave overlay" },
+    { component: LogoOption11, name: "Option 11", description: "Minimalist Letter B - Abstract B shape" },
+    { component: LogoOption12, name: "Option 12", description: "Indian Market Token - Abstract Rupee symbol" },
+    { component: LogoOption13, name: "Option 13", description: "Futurist Tech Node - Geometric connected nodes" },
+    { component: LogoOption14, name: "Option 14", description: "Quantum Loop - Intertwined infinity loops with premium gradient" },
+    { component: LogoOption15, name: "Option 15", description: "Glassy Stack - Layers of data/blocks with rising arrow" },
+    { component: LogoOption16, name: "Option 16", description: "Golden Ratio Abstract - Minimalist growth curve with spiral" },
+    { component: LogoOption17, name: "Option 17", description: "Listing Bell - Classic IPO market debut bell with sound waves" },
+    { component: LogoOption18, name: "Option 18", description: "IPO Watch Radar - Radar scanning for market opportunities" },
+    { component: LogoOption19, name: "Option 19", description: "Golden Allotment - Official share certificate with rising trend" },
+    { component: LogoOption20, name: "Option 20", description: "Market Scale - Measuring valuation and market worth" },
+    { component: LogoOption21, name: "Option 21 ⭐ NEW", description: "LiveGMP Stock Pulse - Animated stock chart with live indicator (PRIMARY)" },
+    { component: LogoOption22, name: "Option 22 ⭐ NEW", description: "LiveGMP Growth Ticker - Dark ticker board with live badge and GMP text" },
+    { component: LogoOption23, name: "Option 23 ⭐ NEW", description: "LiveGMP Candlestick Pro - Professional candlestick chart representing market trends" },
+    { component: LogoOption24, name: "Option 24 ⭐ NEW", description: "LiveGMP Minimal Badge - Clean shield design with growth arrow" },
+    { component: LogoOption25, name: "Option 25 🔥 FRESH", description: "Money Tree - Investment growth with rupee coins" },
+    { component: LogoOption26, name: "Option 26 🔥 FRESH", description: "Target Bullseye - Precision investing with arrow hitting center" },
+    { component: LogoOption27, name: "Option 27 🔥 FRESH", description: "3D Data Cube - Modern tech with animated data visualization" },
+    { component: LogoOption28, name: "Option 28 🔥 FRESH", description: "Market Heartbeat - Pulse of the market with ECG-style chart" },
+    { component: LogoOption29, name: "Option 29 🔥 FRESH", description: "Diamond Premium - High-value sparkling gem for premium GMP" },
+    { component: LogoOption30, name: "Option 30 🔥 FRESH", description: "Rocket Launch - Growth trajectory with animated flames" },
 ];
 
 export default function LogoDemoPage() {
@@ -31,7 +71,7 @@ export default function LogoDemoPage() {
         <div className="min-h-screen bg-slate-950 py-12 px-4">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
-                    IPO Watch Logo Options
+                    LiveGMP Logo Options
                 </h1>
                 <p className="text-slate-400 text-center mb-12">
                     Choose your favorite animated logo design

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { IPOLogo } from "@/components/ui/logo";
+import { LogoOption21 } from "@/components/ui/logo";
 import { ModeToggle } from "@/components/mode-toggle";
 import { RefreshCw } from "lucide-react";
 import lastUpdateMeta from "@/data/lastUpdate.json";
@@ -16,9 +16,9 @@ export function Navbar() {
         <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <IPOLogo className="h-10 w-10" />
-                    <span className="hidden sm:inline font-bold text-xl tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                        IPO Bazar
+                    <LogoOption21 className="h-10 w-10" />
+                    <span className="hidden sm:inline font-bold text-xl tracking-tight bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
+                        Live GMP
                     </span>
                 </div>
 

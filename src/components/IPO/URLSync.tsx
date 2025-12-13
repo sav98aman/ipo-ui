@@ -36,7 +36,7 @@ export function URLSync() {
         if (!isClient) return;
 
         if (selectedIPO?.id) {
-            document.title = `${selectedIPO.companyName} IPO GMP & Status | IPO Watch`;
+            document.title = `${selectedIPO.companyName} IPO GMP & Status | LiveGMP`;
 
             const currentUrl = new URL(window.location.href);
             if (currentUrl.searchParams.get('ipo') !== selectedIPO.id) {
@@ -44,8 +44,8 @@ export function URLSync() {
                 window.history.pushState({}, '', currentUrl.toString());
             }
         } else {
-            if (document.title.includes("| IPO Watch")) {
-                document.title = "IPO Watch - Live Indian IPO Tracker | Real-time GMP Analysis";
+            if (document.title.includes("| LiveGMP")) {
+                document.title = "LiveGMP - Live GMP & IPO Tracker 2025 | Real-time Grey Market Premium";
             }
 
             const currentUrl = new URL(window.location.href);

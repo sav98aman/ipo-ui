@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://ipo-ai-ui.netlify.app/sitemap.xml',
+        sitemap: 'https://livegmp.com/sitemap.xml',
     };
 }

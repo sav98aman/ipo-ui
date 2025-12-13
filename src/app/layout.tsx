@@ -11,36 +11,36 @@ import { Navbar } from "@/components/layout/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IPO Bazar - Live Indian IPO Tracker 2025 | Real-time GMP & Allotment Status",
-  description: "Track 185+ live Indian IPOs on IPO Bazar. Get real-time GMP, subscription status, AI analysis & allotment updates for Mainboard & SME IPOs.",
-  keywords: "IPO Bazar, IPO tracker, live GMP, IPO allotment status, Indian stock market, SME IPO, Mainboard IPO, IPO news",
-  authors: [{ name: "IPO Bazar Team" }],
-  metadataBase: new URL('https://ipo-ai-ui.netlify.app'),
+  title: "LiveGMP - Live GMP & IPO Tracker 2025 | Real-time Grey Market Premium",
+  description: "Track 185+ live IPOs on LiveGMP.com. Get real-time GMP Live updates, subscription status, AI allotment checks & grey market premiums for Mainboard & SME IPOs.",
+  keywords: "Live GMP, GMP Live, LiveGMP, IPO GMP Live, IPO GMP, Grey Market Premium Live, IPO subscription status, SME IPO GMP, Mainboard IPO GMP",
+  authors: [{ name: "LiveGMP Analysis Team" }],
+  metadataBase: new URL('https://livegmp.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: "website",
-    title: "IPO Bazar - Live Indian IPO Tracker 2025",
-    description: "Your #1 Market Hub for IPOs. Track real-time GMP, subscription status & AI analysis for all Indian IPOs.",
-    url: 'https://ipo-ai-ui.netlify.app',
-    siteName: 'IPO Bazar',
+    title: "Live GMP - The #1 Real-Time IPO & GMP Tracker",
+    description: "Don't guess, check Live GMP. The fastest updates for Grey Market Premium, IPO Allotment Status, and Listing Gains.",
+    url: 'https://livegmp.com',
+    siteName: 'LiveGMP',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'IPO Bazar Preview',
+        alt: 'LiveGMP - Live IPO Tracker',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: "summary_large_image",
-    title: "IPO Bazar - Live Indian IPO Tracker 2025",
-    description: "Your #1 Market Hub for IPOs. Track real-time GMP, subscription status & AI analysis for all Indian IPOs.",
+    title: "Live GMP - Real-Time Grey Market Premium Tracker",
+    description: "Track Live GMP, Subscription & Allotment status for all Indian IPOs. The fastest IPO updates on the web.",
     images: ["/og-image.png"],
-    creator: "@ipo_bazar",
+    creator: "@livegmp",
   },
   robots: {
     index: true,
@@ -58,10 +58,10 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   other: {
-    "author": "IPO Bazar Team",
-    "publish_date": "2025-12-11",
-    "article:published_time": "2025-12-11T20:00:00Z",
-    "article:author": "IPO Bazar Analysis Team",
+    "author": "LiveGMP Team",
+    "publish_date": "2025-12-13",
+    "article:published_time": "2025-12-13T09:00:00Z",
+    "article:author": "LiveGMP Analysis Team",
   }
 };
 

@@ -41,7 +41,7 @@ export function HeroSection() {
                 </div>
 
                 <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight">
-                    <span className="gradient-text">IPO Bazar</span>
+                    <span className="gradient-text">LiveGMP</span>
                     <span className="text-foreground ml-2">Live 2025</span>
                 </h1>
 

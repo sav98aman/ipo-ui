@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://ipo-ai-ui.netlify.app'; // Replace with actual domain if different
+    const baseUrl = 'https://livegmp.com'; // Live domain for SEO
 
     return [
         {
