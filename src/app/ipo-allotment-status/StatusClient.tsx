@@ -156,10 +156,10 @@ export default function StatusClient() {
                 </div>
             </div>
 
-            {/* Table Container */}
+            {/* Table Container - Desktop Only */}
             <div className="flex-1 overflow-auto">
                 <div className="max-w-7xl mx-auto px-4 py-6">
-                    <div className="border rounded-lg overflow-hidden bg-card shadow-sm">
+                    <div className="hidden md:block border rounded-lg overflow-hidden bg-card shadow-sm">
                         <div className="overflow-x-auto">
                             <table className="w-full">
                                 <thead className="bg-muted/50 border-b">
@@ -245,6 +245,72 @@ export default function StatusClient() {
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+
+                    {/* Mobile Card View (shown on mobile) */}
+                    <div className="md:hidden space-y-4">
+                        {paginatedIpos.length === 0 ? (
+                            <div className="text-center p-8 text-muted-foreground bg-card border rounded-lg">
+                                No IPOs found matching your search
+                            </div>
+                        ) : (
+                            paginatedIpos.map((ipo) => (
+                                <div key={ipo.id} className="bg-card border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                                    {/* Company Header */}
+                                    <div className="flex items-start justify-between gap-3 mb-3 pb-3 border-b">
+                                        <div className="flex-1">
+                                            <h3 className="font-semibold text-base mb-1">{ipo.companyName}</h3>
+                                            <div className="flex items-center gap-2 flex-wrap">
+                                                <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground font-medium">
+                                                    {ipo.sector}
+                                                </span>
+                                                <span className="text-xs text-muted-foreground">{ipo.id}</span>
+                                            </div>
+                                        </div>
+                                        {ipo.gmp > 0 && (
+                                            <div className="bg-green-50 dark:bg-green-950/30 px-3 py-1.5 rounded-md border border-green-200 dark:border-green-900">
+                                                <div className="text-sm font-bold text-green-600 dark:text-green-400">₹{ipo.gmp}</div>
+                                                {ipo.gmpPercent !== null && ipo.gmpPercent > 0 && (
+                                                    <div className="text-xs text-green-600/80 dark:text-green-400/80">+{ipo.gmpPercent}%</div>
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* IPO Details Grid */}
+                                    <div className="space-y-2 mb-4">
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-xs text-muted-foreground">Price Range</span>
+                                            <span className="text-sm font-medium">{ipo.priceRange}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-xs text-muted-foreground">Subscription</span>
+                                            <span className="text-sm font-medium">{ipo.subscribed}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-xs text-muted-foreground">Listing Date</span>
+                                            <span className="text-sm bg-muted/50 px-2 py-1 rounded-md" suppressHydrationWarning>
+                                                {ipo.listingDate === "TBD" ? "TBD" : new Date(ipo.listingDate).toLocaleDateString('en-IN', {
+                                                    day: 'numeric',
+                                                    month: 'short',
+                                                    year: 'numeric'
+                                                })}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Action Button */}
+                                    <Button
+                                        size="sm"
+                                        variant="default"
+                                        className="w-full gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-0 shadow-sm"
+                                        onClick={() => openStatusPopup(ipo.registrar.link)}
+                                    >
+                                        Check Allotment Status <ExternalLink className="h-3 w-3" />
+                                    </Button>
+                                </div>
+                            ))
+                        )}
                     </div>
 
                     {/* Pagination Controls */}
